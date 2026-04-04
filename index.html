@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Dr. John Stafford Geddes | Pioneer of Mobile Cardiac Care</title>
+    <meta name="description" content="Digital archive and tribute to Dr. John Stafford Geddes (1939–2024), co-inventor of the first mobile coronary care unit and portable defibrillator in Belfast.">
+    <meta name="keywords" content="Dr. John Stafford Geddes, Frank Pantridge, Mobile Coronary Care, Portable Defibrillator, Cardiology Pioneer, Medical History, Belfast">
+    <meta name="author" content="Stephen W. Geddes">
+    <meta name="robots" content="index, follow">
+
+    <meta name="google-site-verification" content="q-En1zNAqSt4c7vxxBi4IcTWHq-TCu4saufN6qfBQ00" />
+
+    <meta property="og:title" content="Dr. John Stafford Geddes Digital Archive">
+    <meta property="og:description" content="A collection of medical history documenting the life and work of cardiology pioneer Dr. John Stafford Geddes.">
+    <meta property="og:image" content="daddrawing.jpg">
+    <meta property="og:url" content="http://drjohnsgeddes.page.gd">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, #004080, #0066cc);
+            color: white;
+            text-align: center;
+            padding: 60px 20px 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            /* Added Flexbox for easier alignment */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header h1 { margin: 0; font-size: 3em; position: relative; z-index: 2; }
+        header p { font-size: 1.4em; margin: 10px 0 0; opacity: 0.9; position: relative; z-index: 2; }
+       
+        .header-icon {
+            position: absolute;
+            top: 20px;
+            font-size: 5em;
+            opacity: 0.7;
+            color: white;
+            z-index: 1;
+        }
+        .header-icon.left { left: 20px; }
+        .header-icon.right { right: 20px; }
+
+        .container {
+            max-width: 900px;
+            margin: -30px auto 40px;
+            padding: 0 20px;
+        }
+        .intro {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .intro p { font-size: 1.2em; margin: 15px 0; }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            justify-items: center;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            max-width: 420px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+        .card a {
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            text-decoration: none;
+            color: #004080;
+        }
+        .card i {
+            font-size: 2.5em;
+            margin-right: 20px;
+            color: #0066cc;
+        }
+        .card-content h3 {
+            margin: 0 0 8px;
+            font-size: 1.4em;
+        }
+        .card-content p {
+            margin: 0;
+            color: #555;
+            font-size: 1em;
+        }
+        .reading-card {
+            background: #fffaf0 !important;
+            border: 2px solid #d4af37 !important;
+            transform: scale(1.02);
+        }
+        .reading-card i {
+            font-size: 3em;
+            color: #8b4513;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #004080;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        /* MOBILE FIX FOR OPTION 1 */
+        @media (max-width: 600px) {
+            header {
+                padding: 30px 15px 30px;
+            }
+            header h1 {
+                font-size: 2.2em;
+                margin-top: 15px; /* Space after icons */
+            }
+            .header-icon {
+                position: static; /* Removes the "floating" effect */
+                font-size: 3.5em;
+                opacity: 0.9;
+                margin: 5px;
+            }
+            /* Displays icons side-by-side on top of the name */
+            .icon-wrapper {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+
+        .archive-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background-color: #ffffff;
+            color: #1a365d;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .archive-button:hover {
+            background-color: #f3f4f6;
+            border-color: #1a365d;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="icon-wrapper">
+            <i class="fas fa-stethoscope header-icon left"></i>
+            <i class="fas fa-heart-pulse header-icon right"></i>
+        </div>
+        <h1>Dr. John Stafford Geddes</h1>
+        <p>10 June 1939 – 9 October 2024</p>
+        <p>Pioneer of the First Mobile Coronary Care Unit & Portable Defibrillator • Lifesaving Cardiologist</p>
+    </header>
+
+    <div class="container">
+        <div style="text-align: center; margin: 20px 0 30px;">
+            <img src="daddrawing.jpg" alt="Charcoal sketch portrait of Dr. John Stafford Geddes" style="max-width: 280px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.25);">
+        </div>
+
+        <div class="intro">
+            <p>Northern Irish cardiologist who co-developed the world's first mobile coronary care ambulance (1966) with Frank Pantridge, enabling portable defibrillation and revolutionizing pre-hospital emergency cardiac care. Performed NI's first pacemaker implantation, advanced electrophysiology, influenced global standards in cardiology, and continued advocating for community resuscitation throughout his life.</p>
+        </div>
+
+        <div class="links-grid">
+            <div class="card"><a href="https://grokipedia.com/page/John_Stafford_Geddes" target="_blank"><i class="fas fa-book-medical"></i><div class="card-content"><h3>Grokipedia Profile</h3><p>Comprehensive entry on his life, innovations, and contributions to cardiac emergency care.</p></div></a></div>
+            <div class="card"><a href="https://history.rcp.ac.uk/inspiring-physicians/john-stafford-geddes" target="_blank"><i class="fas fa-user-md"></i><div class="card-content"><h3>RCP Inspiring Physicians Biography</h3><p>Royal College of Physicians historical profile highlighting his pioneering role.</p></div></a></div>
+            <div class="card"><a href="https://en.wikipedia.org/wiki/John_Stafford_Geddes" target="_blank"><i class="fab fa-wikipedia-w"></i><div class="card-content"><h3>Wikipedia Page</h3><p>Detailed encyclopedia entry on his key achievements in mobile CCU and defibrillation.</p></div></a></div>
+            <div class="card"><a href="https://www.belfasttelegraph.co.uk/news/health/hardly-a-day-goes-past-when-i-dont-think-about-the-donor-ni-man-marks-38-years-since-heart-transplant/a/112137185.html" target="_blank"><i class="fas fa-newspaper"></i><div class="card-content"><h3>Belfast Telegraph Article</h3><p>Heart transplant survivor's story mentioning Dr. Geddes as his longtime cardiologist.</p></div></a></div>
+            <div class="card"><a href="https://www.bmj.com/content/388/bmj.r154" target="_blank"><i class="fas fa-file-medical"></i><div class="card-content"><h3>BMJ Obituary</h3><p>British Medical Journal professional tribute to his groundbreaking work.</p></div></a></div>
+            <div class="card"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12042856/" target="_blank"><i class="fas fa-book"></i><div class="card-content"><h3>Ulster Medical Journal Reflection</h3><p>Thoughts on his passing and detailed collaborations with Pantridge.</p></div></a></div>
+            <div class="card"><a href="https://en.everybodywiki.com/Dr._John_Stafford_Geddes" target="_blank"><i class="fas fa-book-open"></i><div class="card-content"><h3>EverybodyWiki Profile</h3><p>Biographical overview including education and lasting influence on emergency medicine.</p></div></a></div>
+            <div class="card"><a href="https://dalemerg.medicine.dal.ca/divisions/division-of-emergency-medical-services-ems/news-events/the-ems-20-50-celebration-symposium/invited-speakers/" target="_blank"><i class="fas fa-chalkboard-teacher"></i><div class="card-content"><h3>Dalhousie EMS Symposium Bio</h3><p>Featured speaker profile from the EMS 20/50 Celebration symposium.</p></div></a></div>
+            <div class="card"><a href="https://www.researchgate.net/publication/356537291_MY_MEMOIRS_OF_THE_ROYAL_VICTORIA_HOSHITAL_PACEMAKER_IMPLANTATIONS_IN_THE_WEST_WING_OVER_HALF_A_CENTURY_AGO" target="_blank"><i class="fas fa-scroll"></i><div class="card-content"><h3>My Memoirs (RVH)</h3><p>Dr. Geddes' personal memoirs on early pacemaker work at Royal Victoria Hospital.</p></div></a></div>
+            <div class="card"><a href="https://www.ahajournals.org/doi/10.1161/01.cir.96.9.2849?doi=10.1161/01.CIR.96.9.2849" target="_blank"><i class="fas fa-plane-departure"></i><div class="card-content"><h3>Aviation Cardiac Program</h3><p>Article on Qantas' AED program, consulted by Dr. Geddes to extend lifesaving care to the skies.</p></div></a></div>
+            <div class="card"><a href="https://ladymintofoundation.com/wp-content/uploads/2023/01/Lady-Minto-Hospital-Foundation-Minto-Messenger-2012-02-Fall-Winter.pdf" target="_blank"><i class="fas fa-file-pdf"></i><div class="card-content"><h3>Lady Minto Hospital Foundation</h3><p>Features Dr. Geddes advocating for community AED programs.</p></div></a></div>
+            <div class="card"><a href="https://www.ahajournals.org/doi/pdf/10.1161/CIRCULATIONAHA.107.187677" target="_blank"><i class="fas fa-file-medical"></i><div class="card-content"><h3>Pioneers in Cardiology</h3><p>Profile highlighting Dr. Geddes' key collaborations on the defibrillator prototype.</p></div></a></div>
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=3FknaUo3fig" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    <div class="card-content">
+                        <h3>History of Mobile Cardiac Ambulance (Video)</h3>
+                        <p>Dr. Geddes narrating the 1966 launch of Belfast's pioneering mobile coronary care unit.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.belfasttelegraph.co.uk/news/obituaries/tributes-paid-to-groundbreaking-ni-cardiologist-who-transformed-treatment-of-heart-conditions/a/112161756.html" target="_blank">
+                    <i class="fas fa-newspaper"></i>
+                    <div class="card-content">
+                        <h3>Belfast Telegraph: Tributes (2024)</h3>
+                        <p>Heartfelt obituaries highlighting his transformative contributions to cardiac care.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; color: #004080; margin: 40px 0 30px; font-size: 2.2em; position: relative;">
+            For further reading:
+            <span style="display: block; width: 80px; height: 3px; background: #0066cc; margin: 10px auto 0; border-radius: 2px;"></span>
+        </h2>
+
+        <div class="links-grid" style="margin-bottom: 40px;">
+            <div class="card reading-card">
+                <a href="https://www.amazon.com/Evolution-Pre-Hospital-Emergency-Care-Belfast/dp/1854570935" target="_blank">
+                    <i class="fas fa-book"></i>
+                    <div class="card-content">
+                        <h3>The Evolution of Pre-Hospital Care</h3>
+                        <p>Dr. Geddes' own definitive account of the revolutionary care unit developed in Belfast.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card reading-card">
+                <a href="https://catalog.hathitrust.org/Record/000824829" target="_blank">
+                    <i class="fas fa-book-open"></i>
+                    <div class="card-content">
+                        <h3>Digitized Account (HathiTrust)</h3>
+                        <p>Free full-text version of his book—perfect for reading the history online.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card reading-card">
+                <a href="https://www.resuscitationjournal.com/article/0300-9572(76)90035-6/abstract" target="_blank">
+                    <i class="fas fa-file-medical"></i>
+                    <div class="card-content">
+                        <h3>Resuscitation Journal (1976)</h3>
+                        <p>Early published work tied to the cardiac innovations Dr. Geddes helped pioneer.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card reading-card">
+                <a href="https://www.amazon.com/Irish-Country-Family-Books/dp/0765396858" target="_blank">
+                    <i class="fas fa-book-reader"></i>
+                    <div class="card-content">
+                        <h3>An Irish Country Family</h3>
+                        <p>By Dr. Patrick Taylor, who worked with Dr. Geddes; echoes of their shared world in Ulster.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a href="DRJSGArticles.html" class="archive-button"> View Archive Newspaper and Magazine Articles</a>
+
+    <footer>
+        <p> In loving memory of Popsie. Beloved husband of Florence, devoted father of Stephen and Johnny. A life dedicated to saving others. </p>
+    </footer>
+</body>
+</html>
+
