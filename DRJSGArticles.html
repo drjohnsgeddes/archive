@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. John Stafford Geddes | Newspaper Archive Articles</title>
+    <meta name="description" content="Newspaper and magazine archive for Dr. John Stafford Geddes, pioneering Northern Irish cardiologist and co-inventor of the world's first mobile coronary care unit.">
     
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
@@ -23,7 +23,6 @@
             display: flex;
             flex-direction: column;
         }
-
         header {
             background: linear-gradient(to right, #004080, #0066cc);
             color: white;
@@ -36,7 +35,6 @@
             flex-direction: column;
             align-items: center;
         }
-
         .header-img {
             width: 120px;
             height: 120px;
@@ -48,21 +46,18 @@
             z-index: 2;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-
         header h1 { margin: 0; font-size: 2.5em; position: relative; z-index: 2; }
         header p { font-size: 1.2em; margin: 10px 0 0; opacity: 0.9; position: relative; z-index: 2; }
-
         .header-icon {
             position: absolute;
             top: 30px;
             font-size: 5em;
-            opacity: 0.3; 
+            opacity: 0.3;
             color: white;
             z-index: 1;
         }
         .header-icon.left { left: 40px; }
         .header-icon.right { right: 40px; }
-
         .content-container {
             background: white;
             padding: 40px;
@@ -74,12 +69,9 @@
             z-index: 3;
             flex-grow: 1;
         }
-
         h2 { color: #004080; margin-bottom: 25px; text-align: center; }
-        
         .article-list { list-style: none; padding: 0; }
         .article-list li { margin-bottom: 15px; }
-
         .article-link {
             display: flex;
             align-items: center;
@@ -93,16 +85,13 @@
             transition: all 0.3s ease;
             font-size: 1.1em;
         }
-
         .article-link:hover {
             background: #0066cc;
             color: white;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,102,204,0.3);
         }
-
         .article-link i { margin-right: 15px; font-size: 1.2em; }
-
         .footer-link {
             margin-top: 30px;
             display: inline-block;
@@ -111,7 +100,6 @@
             font-weight: bold;
         }
         .footer-link:hover { text-decoration: underline; }
-
         footer {
             text-align: center;
             padding: 30px;
@@ -120,11 +108,9 @@
             font-size: 0.9em;
             width: 100%;
         }
-
         @media (max-width: 600px) {
             header { padding: 40px 15px 50px; }
             header h1 { font-size: 1.8em; }
-            
             .header-icon {
                 position: static;
                 font-size: 3em;
@@ -145,7 +131,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <div class="icon-wrapper">
             <i class="fas fa-stethoscope header-icon left"></i>
