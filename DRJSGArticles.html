@@ -26,130 +26,31 @@
     <meta property="og:url" content="https://drjohnsgeddes.github.io/archive/DRJSGArticles.html">
 
     <link rel="canonical" href="https://drjohnsgeddes.github.io/archive/DRJSGArticles.html">
-
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicon.png">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom, #e6f2ff, #ffffff);
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            background: linear-gradient(to right, #004080, #0066cc);
-            color: white;
-            padding: 60px 20px 40px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .header-img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to bottom, #e6f2ff, #ffffff); margin: 0; padding: 0; color: #333; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        header { background: linear-gradient(to right, #004080, #0066cc); color: white; padding: 60px 20px 40px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
+        .header-img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid white; margin-bottom: 15px; position: relative; z-index: 2; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
         header h1 { margin: 0; font-size: 2.5em; position: relative; z-index: 2; }
         header p { font-size: 1.2em; margin: 10px 0 0; opacity: 0.9; position: relative; z-index: 2; }
-        .header-icon {
-            position: absolute;
-            top: 30px;
-            font-size: 5em;
-            opacity: 0.3;
-            color: white;
-            z-index: 1;
-        }
+        .header-icon { position: absolute; top: 30px; font-size: 5em; opacity: 0.3; color: white; z-index: 1; }
         .header-icon.left { left: 40px; }
         .header-icon.right { right: 40px; }
-        .content-container {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            max-width: 700px;
-            margin: -30px auto 50px auto;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 3;
-            flex-grow: 1;
-        }
+        .content-container { background: white; padding: 40px; border-radius: 12px; max-width: 700px; margin: -30px auto 50px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 3; flex-grow: 1; }
         h2 { color: #004080; margin-bottom: 25px; text-align: center; }
         .article-list { list-style: none; padding: 0; }
         .article-list li { margin-bottom: 15px; }
-        .article-link {
-            display: flex;
-            align-items: center;
-            background: #fff;
-            border: 2px solid #0066cc;
-            color: #004080;
-            padding: 18px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-size: 1.1em;
-        }
-        .article-link:hover {
-            background: #0066cc;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,102,204,0.3);
-        }
+        .article-link { display: flex; align-items: center; background: #fff; border: 2px solid #0066cc; color: #004080; padding: 18px; text-decoration: none; font-weight: bold; border-radius: 8px; transition: all 0.3s ease; font-size: 1.1em; }
+        .article-link:hover { background: #0066cc; color: white; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,102,204,0.3); }
         .article-link i { margin-right: 15px; font-size: 1.2em; }
-        .footer-link {
-            margin-top: 30px;
-            display: inline-block;
-            color: #0066cc;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        .footer-link { margin-top: 30px; display: inline-block; color: #0066cc; text-decoration: none; font-weight: bold; }
         .footer-link:hover { text-decoration: underline; }
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #004080;
-            color: white;
-            font-size: 0.9em;
-            width: 100%;
-        }
-        @media (max-width: 600px) {
-            header { padding: 40px 15px 50px; }
-            header h1 { font-size: 1.8em; }
-            .header-icon {
-                position: static;
-                font-size: 3em;
-                opacity: 0.8;
-                margin: 10px;
-            }
-            .icon-wrapper {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                order: -1;
-            }
-            .content-container {
-                margin: -20px 15px 40px;
-                padding: 25px;
-            }
-        }
+        footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; width: 100%; }
+        @media (max-width: 600px) { header { padding: 40px 15px 50px; } header h1 { font-size: 1.8em; } .header-icon { position: static; font-size: 3em; opacity: 0.8; margin: 10px; } .icon-wrapper { display: flex; justify-content: center; gap: 20px; order: -1; } .content-container { margin: -20px 15px 40px; padding: 25px; } }
     </style>
 </head>
 <body>
@@ -158,7 +59,7 @@
             <i class="fas fa-stethoscope header-icon left"></i>
             <i class="fas fa-heart-pulse header-icon right"></i>
         </div>
-        <img src="dr-john-stafford-geddes.jpg"
+        <img src="dr-john-stafford-geddes-portrait.jpg"
              alt="Charcoal sketch portrait of Dr. John Stafford Geddes, cardiac pioneer"
              class="header-img"
              width="120"
@@ -169,7 +70,6 @@
 
     <div class="content-container">
         <h2>Please Select an Article</h2>
-
         <ul class="article-list">
             <li><a href="braindrain.html" class="article-link"><i class="fas fa-newspaper"></i> Belfast Telegraph Brain Drain</a></li>
             <li><a href="century.html" class="article-link"><i class="fas fa-award"></i> People of the Century</a></li>
@@ -177,15 +77,9 @@
             <li><a href="newsbulletin.html" class="article-link"><i class="fas fa-globe"></i> World Congress of Cardiology Bulletin</a></li>
             <li><a href="tvtimes.html" class="article-link"><i class="fas fa-tv"></i> Ulster TV Times</a></li>
         </ul>
-
-        <div style="text-align: center;">
-            <a href="index.html" class="footer-link">← Return to Homepage</a>
-        </div>
+        <div style="text-align: center;"><a href="index.html" class="footer-link">← Return to Homepage</a></div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 The Dr. John Stafford Geddes Archive. All Rights Reserved.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 The Dr. John Stafford Geddes Archive. All Rights Reserved.</p></footer>
 </body>
 </html>
