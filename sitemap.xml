@@ -4,28 +4,34 @@
     <loc>https://drjohnsgeddes.github.io/archive/</loc>
     <priority>1.00</priority>
   </url>
+
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/DRJSGArticles.html</loc>
-    <priority>0.80</priority>
+    <priority>0.50</priority>
   </url>
+
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/braindrain.html</loc>
-    <priority>0.70</priority>
+    <priority>0.40</priority>
   </url>
+
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/century.html</loc>
-    <priority>0.70</priority>
+    <priority>0.40</priority>
   </url>
+
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/cheetah.html</loc>
-    <priority>0.70</priority>
+    <priority>0.40</priority>
   </url>
+
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/newsbulletin.html</loc>
-    <priority>0.70</priority>
+    <priority>0.40</priority>
   </url>
+
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/tvtimes.html</loc>
-    <priority>0.70</priority>
+    <priority>0.40</priority>
   </url>
 </urlset>
