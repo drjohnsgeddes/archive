@@ -19,10 +19,20 @@
     <link rel="apple-touch-icon" href="favicon.png">
 
     <meta name="application-name" content="Dr. John Stafford Geddes Archive">
+    <meta name="description" content="Official archive of Dr. John Stafford Geddes, visionary cardiologist and pioneer of the Belfast 'Flying Squad.' Discover his legacy in mobile coronary care and his global work implementing defibrillators on commercial airlines like Qantas.">
+    <meta name="keywords" content="Dr. John Stafford Geddes, Flying Squad, Frank Pantridge, Mobile Coronary Care, Portable Defibrillator, Cardiology Pioneer, Medical History, Belfast, RVH, Qantas, Aviation Medicine">
+    <meta name="author" content="Stephen W. Geddes">
+    <meta name="robots" content="index, follow">
+
+    <meta name="google-site-verification" content="google3bafb564968c6e31" />
+    <meta name="msvalidate.01" content="AB6B3063402C53115CA26A95B3E0ADE5" />
+
     <meta property="og:site_name" content="Dr. John Stafford Geddes Archive">
     <meta property="og:title" content="Dr. John Stafford Geddes | Visionary Cardiologist & Founder of the Belfast Flying Squad">
     <meta property="og:type" content="website">
-
+    <meta property="og:url" content="https://drjohnsgeddes.github.io/archive/">
+    <meta property="og:description" content="Medical history documenting the life and work of cardiology pioneer Dr. John Stafford Geddes, the Belfast Flying Squad, and the introduction of defibrillators to commercial airlines.">
+    
     <meta property="og:image" content="dr-john-stafford-geddes.jpg">
     <meta name="thumbnail" content="dr-john-stafford-geddes.jpg">
 
@@ -38,43 +48,66 @@
     }
     </script>
 
-    <meta name="description" content="Official archive of Dr. John Stafford Geddes, visionary cardiologist and pioneer of the Belfast 'Flying Squad.' Discover his legacy in mobile coronary care and his global work implementing defibrillators on commercial airlines like Qantas.">
-    <meta name="keywords" content="Dr. John Stafford Geddes, Flying Squad, Frank Pantridge, Mobile Coronary Care, Portable Defibrillator, Cardiology Pioneer, Medical History, Belfast, RVH, Qantas, Aviation Medicine">
-    <meta name="author" content="Stephen W. Geddes">
-    <meta name="robots" content="index, follow">
-
-    <meta name="google-site-verification" content="google3bafb564968c6e31" />
-    <meta name="msvalidate.01" content="AB6B3063402C53115CA26A95B3E0ADE5" />
-
-    <meta property="og:description" content="Medical history documenting the life and work of cardiology pioneer Dr. John Stafford Geddes, the Belfast Flying Squad, and the introduction of defibrillators to commercial airlines.">
-    <meta property="og:url" content="https://drjohnsgeddes.github.io/archive/">
-
     <link rel="canonical" href="https://drjohnsgeddes.github.io/archive/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to bottom, #e6f2ff, #ffffff); color: #333; margin: 0; padding: 0; line-height: 1.6; }
+        
         header { background: linear-gradient(to right, #004080, #0066cc); color: white; text-align: center; padding: 60px 20px 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
         header h1 { margin: 0; font-size: 3em; position: relative; z-index: 2; }
         header p { font-size: 1.4em; margin: 10px 0 0; opacity: 0.9; position: relative; z-index: 2; }
+        
         .header-icon { position: absolute; top: 20px; font-size: 5em; opacity: 0.7; color: white; z-index: 1; }
         .header-icon.left { left: 20px; }
         .header-icon.right { right: 20px; }
+
         .container { max-width: 900px; margin: -30px auto 40px; padding: 0 20px; }
+        
+        /* Portrait Container: Fixed for desktop fuzziness and top-of-head clearance */
+        .portrait-frame { 
+            text-align: center; 
+            margin: 60px 0 30px; 
+            padding-top: 20px; /* Ensures space above the head */
+        }
+        
+        .portrait-frame img { 
+            max-width: 280px; 
+            height: auto; 
+            border-radius: 12px; 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            /* Resolution fix for desktop */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            display: inline-block;
+        }
+
         .intro { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin-bottom: 40px; text-align: center; }
+        
         .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; justify-items: center; }
+        
         .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; width: 100%; max-width: 420px; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
         .card a { display: flex; align-items: center; padding: 25px; text-decoration: none; color: #004080; }
         .card i { font-size: 2.5em; margin-right: 20px; color: #0066cc; }
+        
         .card-content h3 { margin: 0 0 8px; font-size: 1.4em; }
         .card-content p { margin: 0; color: #555; font-size: 1em; }
+        
         .reading-card { background: #fffaf0 !important; border: 2px solid #d4af37 !important; transform: scale(1.02); }
         .reading-card i { font-size: 3em; color: #8b4513; }
+        
         footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; }
-        @media (max-width: 600px) { header { padding: 30px 15px 30px; } header h1 { font-size: 2.2em; margin-top: 15px; } .header-icon { position: static; font-size: 3.5em; opacity: 0.9; margin: 5px; } .icon-wrapper { display: flex; justify-content: center; gap: 20px; } }
+        
         .archive-button { display: block; width: fit-content; margin: 20px auto; padding: 15px 30px; background-color: #ffffff; color: #1a365d; text-decoration: none; font-weight: bold; font-size: 1.1em; border: 2px solid #d1d5db; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease; }
         .archive-button:hover { background-color: #f3f4f6; border-color: #1a365d; transform: translateY(-2px); }
+
+        @media (max-width: 600px) { 
+            header { padding: 30px 15px 30px; } 
+            header h1 { font-size: 2.2em; margin-top: 15px; } 
+            .header-icon { position: static; font-size: 3.5em; opacity: 0.9; margin: 5px; } 
+            .icon-wrapper { display: flex; justify-content: center; gap: 20px; } 
+        }
     </style>
 </head>
 <body>
@@ -89,10 +122,8 @@
     </header>
 
     <div class="container">
-        <div style="text-align: center; margin: 60px 0 30px;">
-            <img src="dr-john-stafford-geddes-portrait.jpg"
-                 alt="Charcoal sketch portrait of Dr. John Stafford Geddes"
-                 style="max-width: 280px; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.25);">
+        <div class="portrait-frame">
+            <img src="dr-john-stafford-geddes-portrait.jpg" alt="Charcoal sketch portrait of Dr. John Stafford Geddes">
         </div>
 
         <div class="intro">
@@ -119,6 +150,7 @@
         </div>
 
         <h2 style="text-align: center; color: #004080; margin: 40px 0 30px; font-size: 2.2em; position: relative;">For further reading:<span style="display: block; width: 80px; height: 3px; background: #0066cc; margin: 10px auto 0; border-radius: 2px;"></span></h2>
+        
         <div class="links-grid" style="margin-bottom: 40px;">
             <div class="card reading-card"><a href="https://www.amazon.com/Evolution-Pre-Hospital-Emergency-Care-Belfast/dp/1854570935" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i><div class="card-content"><h3>The Evolution of Pre-Hospital Care</h3><p>Dr. Geddes' own definitive account of the revolutionary care unit developed in Belfast.</p></div></a></div>
             <div class="card reading-card"><a href="https://catalog.hathitrust.org/Record/000824829" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i><div class="card-content"><h3>Digitized Account (HathiTrust)</h3><p>Free full-text version of his book—perfect for reading the history online.</p></div></a></div>
@@ -128,6 +160,7 @@
     </div>
 
     <a href="DRJSGArticles.html" class="archive-button">View Archive Newspaper and Magazine Articles</a>
+    
     <footer><p>❤️ In loving memory of Popsie. Beloved husband of Florence, devoted father of Stephen and Johnny. A life dedicated to saving others. ❤️</p></footer>
 </body>
 </html>
