@@ -53,22 +53,34 @@
         }
         .nav-bar a:hover { opacity: 0.8; }
 
-        header { background: linear-gradient(to right, #004080, #0066cc); color: white; padding: 60px 20px 80px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
+        /* Reduced top padding to move everything up */
+        header { 
+            background: linear-gradient(to right, #004080, #0066cc); 
+            color: white; 
+            padding: 30px 20px 80px; /* Reduced from 60px to 30px */
+            text-align: center; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+            position: relative; 
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
         
-        /* Adjusted Circular Portrait - In-between size */
+        /* Adjusted Circular Portrait - Raised slightly */
         .header-img { 
-            width: 180px; /* Optimized size for clarity and balance */
+            width: 180px; 
             height: 180px; 
             object-fit: cover; 
-            object-position: top; /* Ensures top of head is visible */
+            object-position: top; 
             border-radius: 50%; 
             border: 5px solid white; 
             margin-bottom: 15px; 
+            margin-top: -10px; /* Slight negative margin to lift it further */
             position: relative; 
             z-index: 2; 
             box-shadow: 0 8px 25px rgba(0,0,0,0.4); 
             
-            /* Sharpening rendering fixes */
             image-rendering: -webkit-optimize-contrast;
             image-rendering: high-quality;
         }
@@ -90,9 +102,9 @@
         footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; width: 100%; }
         
         @media (max-width: 600px) { 
-            header { padding: 40px 15px 50px; } 
+            header { padding: 30px 15px 50px; } 
             header h1 { font-size: 1.8em; } 
-            .header-img { width: 140px; height: 140px; }
+            .header-img { width: 140px; height: 140px; margin-top: 0; }
             .header-icon { position: static; font-size: 3em; opacity: 0.8; margin: 10px; } 
             .icon-wrapper { display: flex; justify-content: center; gap: 20px; order: -1; } 
             .content-container { margin: -20px 15px 40px; padding: 25px; } 
