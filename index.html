@@ -32,6 +32,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://drjohnsgeddes.github.io/archive/">
     <meta property="og:description" content="Medical history documenting the life and work of cardiology pioneer Dr. John Stafford Geddes, the Belfast Flying Squad, and the introduction of defibrillators to commercial airlines.">
+    
     <meta property="og:image" content="https://drjohnsgeddes.github.io/archive/dr-john-stafford-geddes.jpg">
     <meta name="thumbnail" content="dr-john-stafford-geddes.jpg">
 
@@ -53,7 +54,7 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to bottom, #e6f2ff, #ffffff); color: #333; margin: 0; padding: 0; line-height: 1.6; }
         
-        header { background: linear-gradient(to right, #004080, #0066cc); color: white; text-align: center; padding: 60px 20px 100px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
+        header { background: linear-gradient(to right, #004080, #0066cc); color: white; text-align: center; padding: 60px 20px 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
         header h1 { margin: 0; font-size: 3em; position: relative; z-index: 2; }
         header p { font-size: 1.4em; margin: 10px 0 0; opacity: 0.9; position: relative; z-index: 2; }
         
@@ -61,37 +62,23 @@
         .header-icon.left { left: 20px; }
         .header-icon.right { right: 20px; }
 
-        .container { max-width: 900px; margin: 0 auto 40px; padding: 0 20px; }
+        .container { max-width: 900px; margin: -30px auto 40px; padding: 0 20px; }
         
-        /* The Circular Portrait Effect */
-        .portrait-section {
-            display: flex;
-            justify-content: center;
-            margin-top: -80px; /* Overlaps the header */
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 5;
+        .portrait-frame { 
+            text-align: center; 
+            margin: 60px 0 30px; 
+            padding-top: 30px; 
         }
-
-        .circle-frame {
-            width: 350px; /* Enlarged for higher resolution display */
-            height: 350px;
-            border-radius: 50%;
-            border: 10px solid white;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            background-color: white;
-        }
-
-        .circle-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top; /* Ensures the top of the head stays visible */
-            display: block;
-            /* High-quality rendering for charcoal */
+        
+        .portrait-frame img { 
+            max-width: 280px; 
+            height: auto; 
+            border-radius: 12px; 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            /* Resolution fix for desktop sharpness */
             image-rendering: -webkit-optimize-contrast;
             image-rendering: high-quality;
+            display: inline-block;
         }
 
         .intro { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin-bottom: 40px; text-align: center; }
@@ -109,18 +96,16 @@
         .reading-card { background: #fffaf0 !important; border: 2px solid #d4af37 !important; transform: scale(1.02); }
         .reading-card i { font-size: 3em; color: #8b4513; }
         
-        footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; margin-top: 50px; }
+        footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; }
         
         .archive-button { display: block; width: fit-content; margin: 20px auto; padding: 15px 30px; background-color: #ffffff; color: #1a365d; text-decoration: none; font-weight: bold; font-size: 1.1em; border: 2px solid #d1d5db; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease; }
         .archive-button:hover { background-color: #f3f4f6; border-color: #1a365d; transform: translateY(-2px); }
 
         @media (max-width: 600px) { 
-            header { padding: 30px 15px 60px; } 
+            header { padding: 30px 15px 30px; } 
             header h1 { font-size: 2.2em; margin-top: 15px; } 
             .header-icon { position: static; font-size: 3.5em; opacity: 0.9; margin: 5px; } 
             .icon-wrapper { display: flex; justify-content: center; gap: 20px; } 
-            .circle-frame { width: 280px; height: 280px; }
-            .portrait-section { margin-top: -50px; }
         }
     </style>
 </head>
@@ -135,13 +120,11 @@
         <p>Pioneer of the Belfast "Flying Squad" & Portable Defibrillator • Visionary Cardiologist</p>
     </header>
 
-    <div class="portrait-section">
-        <div class="circle-frame">
+    <div class="container">
+        <div class="portrait-frame">
             <img src="dr-john-stafford-geddes-portrait.jpg" alt="Charcoal sketch portrait of Dr. John Stafford Geddes">
         </div>
-    </div>
 
-    <div class="container">
         <div class="intro">
             <p>Northern Irish cardiologist who co-developed the world's first mobile coronary care unit (Belfast's "Flying Squad") in 1966, enabling portable defibrillation and revolutionizing pre-hospital cardiac care. His visionary influence extended globally, notably pioneering the implementation of defibrillators on commercial airlines including Qantas.</p>
         </div>
