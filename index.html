@@ -75,7 +75,6 @@
             height: auto; 
             border-radius: 12px; 
             box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-            /* Resolution fix for desktop sharpness */
             image-rendering: -webkit-optimize-contrast;
             image-rendering: high-quality;
             display: inline-block;
@@ -83,22 +82,22 @@
 
         .intro { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin-bottom: 40px; text-align: center; }
         
-        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; justify-items: center; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; justify-items: center; }
         
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; width: 100%; max-width: 420px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; width: 100%; max-width: 380px; } /* Slightly narrower cards */
         .card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
-        .card a { display: flex; align-items: center; padding: 25px; text-decoration: none; color: #004080; }
-        .card i { font-size: 2.5em; margin-right: 20px; color: #0066cc; }
+        .card a { display: flex; align-items: center; padding: 20px 18px; text-decoration: none; color: #004080; } /* Reduced padding */
+        .card i { font-size: 2.2em; margin-right: 15px; color: #0066cc; } /* Slightly smaller icons */
         
-        .card-content h3 { margin: 0 0 8px; font-size: 1.4em; }
-        .card-content p { margin: 0; color: #555; font-size: 1em; }
+        .card-content h3 { margin: 0 0 6px; font-size: 1.3em; } /* Slightly smaller text */
+        .card-content p { margin: 0; color: #555; font-size: 0.95em; }
         
         .reading-card { background: #fffaf0 !important; border: 2px solid #d4af37 !important; transform: scale(1.02); }
-        .reading-card i { font-size: 3em; color: #8b4513; }
+        .reading-card i { font-size: 2.5em; color: #8b4513; }
         
         footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; }
         
-        .archive-button { display: block; width: fit-content; margin: 20px auto; padding: 15px 30px; background-color: #ffffff; color: #1a365d; text-decoration: none; font-weight: bold; font-size: 1.1em; border: 2px solid #d1d5db; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .archive-button { display: block; width: fit-content; margin: 20px auto; padding: 12px 25px; background-color: #ffffff; color: #1a365d; text-decoration: none; font-weight: bold; font-size: 1.05em; border: 2px solid #d1d5db; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease; } /* Slimmed down button */
         .archive-button:hover { background-color: #f3f4f6; border-color: #1a365d; transform: translateY(-2px); }
 
         /* MOBILE SPECIFIC ADJUSTMENTS */
@@ -108,14 +107,12 @@
             .header-icon { position: static; font-size: 3.5em; opacity: 0.9; margin: 5px; } 
             .icon-wrapper { display: flex; justify-content: center; gap: 20px; } 
             
-            /* Making grid buttons slightly smaller */
-            .card a { padding: 18px; }
-            .card i { font-size: 2em; margin-right: 15px; }
-            .card-content h3 { font-size: 1.2em; }
-            .card-content p { font-size: 0.9em; }
+            .card a { padding: 15px 12px; } /* Even tighter padding on mobile */
+            .card i { font-size: 1.8em; margin-right: 12px; }
+            .card-content h3 { font-size: 1.1em; }
+            .card-content p { font-size: 0.85em; }
             
-            /* Making the archive button slightly smaller */
-            .archive-button { padding: 12px 24px; font-size: 1em; }
+            .archive-button { padding: 10px 20px; font-size: 0.95em; }
         }
     </style>
 </head>
