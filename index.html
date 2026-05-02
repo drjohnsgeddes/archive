@@ -66,8 +66,9 @@
         
         .portrait-frame { 
             text-align: center; 
-            margin: 60px 0 30px; 
-            padding-top: 30px; 
+            /* Synchronized margins and padding for perfect top/bottom balance */
+            margin: 30px 0 30px; 
+            padding-top: 0; 
         }
         
         .portrait-frame img { 
@@ -84,12 +85,12 @@
         
         .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; justify-items: center; }
         
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; width: 100%; max-width: 420px; } /* Restored original desktop width */
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; width: 100%; max-width: 420px; } 
         .card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
-        .card a { display: flex; align-items: center; padding: 25px; text-decoration: none; color: #004080; } /* Restored desktop padding */
-        .card i { font-size: 2.5em; margin-right: 20px; color: #0066cc; } /* Restored desktop icon size */
+        .card a { display: flex; align-items: center; padding: 25px; text-decoration: none; color: #004080; } 
+        .card i { font-size: 2.5em; margin-right: 20px; color: #0066cc; } 
         
-        .card-content h3 { margin: 0 0 8px; font-size: 1.4em; } /* Restored desktop font size */
+        .card-content h3 { margin: 0 0 8px; font-size: 1.4em; } 
         .card-content p { margin: 0; color: #555; font-size: 1em; }
         
         .reading-card { background: #fffaf0 !important; border: 2px solid #d4af37 !important; transform: scale(1.02); }
@@ -107,14 +108,12 @@
             .header-icon { position: static; font-size: 3.5em; opacity: 0.9; margin: 5px; } 
             .icon-wrapper { display: flex; justify-content: center; gap: 20px; } 
             
-            /* Tightening buttons specifically for mobile only */
             .card { max-width: 360px; } 
             .card a { padding: 18px 15px; } 
             .card i { font-size: 2em; margin-right: 15px; }
             .card-content h3 { font-size: 1.15em; }
             .card-content p { font-size: 0.85em; }
             
-            /* Slightly smaller archive button on mobile */
             .archive-button { padding: 12px 22px; font-size: 1em; }
         }
     </style>
