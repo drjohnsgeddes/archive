@@ -53,33 +53,15 @@
         }
         .nav-bar a:hover { opacity: 0.8; }
 
-        header { background: linear-gradient(to right, #004080, #0066cc); color: white; padding: 60px 20px 80px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
-        
-        /* Fixed and Enlarged Circular Portrait for Articles Page */
-        .header-img { 
-            width: 220px; /* Larger size to improve clarity on desktop */
-            height: 220px; 
-            object-fit: cover; 
-            object-position: top; /* Ensures top of head is visible */
-            border-radius: 50%; 
-            border: 6px solid white; 
-            margin-bottom: 15px; 
-            position: relative; 
-            z-index: 2; 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4); 
-            
-            /* Sharpening rendering fixes */
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: high-quality;
-        }
-
+        header { background: linear-gradient(to right, #004080, #0066cc); color: white; padding: 40px 20px 40px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
+        .header-img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid white; margin-bottom: 15px; position: relative; z-index: 2; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
         header h1 { margin: 0; font-size: 2.5em; position: relative; z-index: 2; }
         header p { font-size: 1.2em; margin: 10px 0 0; opacity: 0.9; position: relative; z-index: 2; }
         .header-icon { position: absolute; top: 30px; font-size: 5em; opacity: 0.3; color: white; z-index: 1; }
         .header-icon.left { left: 40px; }
         .header-icon.right { right: 40px; }
        
-        .content-container { background: white; padding: 40px; border-radius: 12px; max-width: 700px; margin: -40px auto 50px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 3; flex-grow: 1; }
+        .content-container { background: white; padding: 40px; border-radius: 12px; max-width: 700px; margin: -30px auto 50px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 3; flex-grow: 1; }
         h2 { color: #004080; margin-bottom: 25px; text-align: center; }
         .article-list { list-style: none; padding: 0; }
         .article-list li { margin-bottom: 15px; }
@@ -88,15 +70,7 @@
         .article-link i { margin-right: 15px; font-size: 1.2em; }
        
         footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; width: 100%; }
-        
-        @media (max-width: 600px) { 
-            header { padding: 40px 15px 50px; } 
-            header h1 { font-size: 1.8em; } 
-            .header-img { width: 150px; height: 150px; }
-            .header-icon { position: static; font-size: 3em; opacity: 0.8; margin: 10px; } 
-            .icon-wrapper { display: flex; justify-content: center; gap: 20px; order: -1; } 
-            .content-container { margin: -20px 15px 40px; padding: 25px; } 
-        }
+        @media (max-width: 600px) { header { padding: 40px 15px 50px; } header h1 { font-size: 1.8em; } .header-icon { position: static; font-size: 3em; opacity: 0.8; margin: 10px; } .icon-wrapper { display: flex; justify-content: center; gap: 20px; order: -1; } .content-container { margin: -20px 15px 40px; padding: 25px; } }
     </style>
 </head>
 <body>
@@ -111,7 +85,9 @@
         </div>
         <img src="dr-john-stafford-geddes-portrait.jpg"
              alt="Charcoal sketch portrait of Dr. John Stafford Geddes, cardiac pioneer"
-             class="header-img">
+             class="header-img"
+             width="120"
+             height="120">
         <h1>Dr. John Stafford Geddes</h1>
         <p>Newspaper Archives & Historical Records</p>
     </header>
