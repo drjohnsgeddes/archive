@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+   
     <title>Research & Media Archive | Dr. John Stafford Geddes</title>
 
     <script type="text/javascript">
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Media & Research Archive | Dr. John Stafford Geddes">
     <meta property="og:description" content="A curated collection of historical records, newspaper articles, and magazine features documenting the career and cardiac innovations of Dr. John Stafford Geddes.">
-    
+   
     <meta property="og:image" content="https://drjohnsgeddes.github.io/archive/dr-john-stafford-geddes-portrait.jpg">
     <meta property="og:url" content="https://drjohnsgeddes.github.io/archive/DRJSGArticles.html">
 
@@ -35,42 +35,68 @@
 
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to bottom, #e6f2ff, #ffffff); margin: 0; padding: 0; color: #333; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
-        
+       
         /* Unified Blue Navigation Bar */
-        .nav-bar { 
-            background: linear-gradient(to right, #004080, #0066cc); 
-            padding: 12px 20px; 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
-            display: flex; 
-            align-items: center; 
+        .nav-bar {
+            background: linear-gradient(to right, #004080, #0066cc);
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
         }
-        .nav-bar a { 
-            text-decoration: none; 
-            color: #e6f2ff; 
-            font-weight: bold; 
-            font-size: 1em; 
+        .nav-bar a {
+            text-decoration: none;
+            color: #e6f2ff;
+            font-weight: bold;
+            font-size: 1em;
             transition: opacity 0.3s;
         }
         .nav-bar a:hover { opacity: 0.8; }
 
-        header { background: linear-gradient(to right, #004080, #0066cc); color: white; padding: 40px 20px 40px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
-        .header-img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid white; margin-bottom: 15px; position: relative; z-index: 2; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        header { background: linear-gradient(to right, #004080, #0066cc); color: white; padding: 60px 20px 80px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
+        
+        /* Fixed and Enlarged Circular Portrait for Articles Page */
+        .header-img { 
+            width: 220px; /* Larger size to improve clarity on desktop */
+            height: 220px; 
+            object-fit: cover; 
+            object-position: top; /* Ensures top of head is visible */
+            border-radius: 50%; 
+            border: 6px solid white; 
+            margin-bottom: 15px; 
+            position: relative; 
+            z-index: 2; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4); 
+            
+            /* Sharpening rendering fixes */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: high-quality;
+        }
+
         header h1 { margin: 0; font-size: 2.5em; position: relative; z-index: 2; }
         header p { font-size: 1.2em; margin: 10px 0 0; opacity: 0.9; position: relative; z-index: 2; }
         .header-icon { position: absolute; top: 30px; font-size: 5em; opacity: 0.3; color: white; z-index: 1; }
         .header-icon.left { left: 40px; }
         .header-icon.right { right: 40px; }
-        
-        .content-container { background: white; padding: 40px; border-radius: 12px; max-width: 700px; margin: -30px auto 50px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 3; flex-grow: 1; }
+       
+        .content-container { background: white; padding: 40px; border-radius: 12px; max-width: 700px; margin: -40px auto 50px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; z-index: 3; flex-grow: 1; }
         h2 { color: #004080; margin-bottom: 25px; text-align: center; }
         .article-list { list-style: none; padding: 0; }
         .article-list li { margin-bottom: 15px; }
         .article-link { display: flex; align-items: center; background: #fff; border: 2px solid #0066cc; color: #004080; padding: 18px; text-decoration: none; font-weight: bold; border-radius: 8px; transition: all 0.3s ease; font-size: 1.1em; }
         .article-link:hover { background: #0066cc; color: white; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,102,204,0.3); }
         .article-link i { margin-right: 15px; font-size: 1.2em; }
-        
+       
         footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; width: 100%; }
-        @media (max-width: 600px) { header { padding: 40px 15px 50px; } header h1 { font-size: 1.8em; } .header-icon { position: static; font-size: 3em; opacity: 0.8; margin: 10px; } .icon-wrapper { display: flex; justify-content: center; gap: 20px; order: -1; } .content-container { margin: -20px 15px 40px; padding: 25px; } }
+        
+        @media (max-width: 600px) { 
+            header { padding: 40px 15px 50px; } 
+            header h1 { font-size: 1.8em; } 
+            .header-img { width: 150px; height: 150px; }
+            .header-icon { position: static; font-size: 3em; opacity: 0.8; margin: 10px; } 
+            .icon-wrapper { display: flex; justify-content: center; gap: 20px; order: -1; } 
+            .content-container { margin: -20px 15px 40px; padding: 25px; } 
+        }
     </style>
 </head>
 <body>
@@ -85,9 +111,7 @@
         </div>
         <img src="dr-john-stafford-geddes-portrait.jpg"
              alt="Charcoal sketch portrait of Dr. John Stafford Geddes, cardiac pioneer"
-             class="header-img"
-             width="120"
-             height="120">
+             class="header-img">
         <h1>Dr. John Stafford Geddes</h1>
         <p>Newspaper Archives & Historical Records</p>
     </header>
