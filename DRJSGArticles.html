@@ -57,7 +57,7 @@
         header { 
             background: linear-gradient(to right, #004080, #0066cc); 
             color: white; 
-            padding: 30px 20px 80px; /* Reduced from 60px to 30px */
+            padding: 30px 20px 80px; 
             text-align: center; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
             position: relative; 
@@ -67,7 +67,7 @@
             align-items: center; 
         }
         
-        /* Adjusted Circular Portrait - Raised slightly */
+        /* Adjusted Circular Portrait - Raised slightly with interactive states */
         .header-img { 
             width: 180px; 
             height: 180px; 
@@ -76,13 +76,20 @@
             border-radius: 50%; 
             border: 5px solid white; 
             margin-bottom: 15px; 
-            margin-top: -10px; /* Slight negative margin to lift it further */
+            margin-top: -10px; 
             position: relative; 
             z-index: 2; 
             box-shadow: 0 8px 25px rgba(0,0,0,0.4); 
             
             image-rendering: -webkit-optimize-contrast;
             image-rendering: high-quality;
+
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .header-img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         header h1 { margin: 0; font-size: 2.5em; position: relative; z-index: 2; }
@@ -101,6 +108,42 @@
        
         footer { text-align: center; padding: 30px; background: #004080; color: white; font-size: 0.9em; width: 100%; }
         
+        /* LIGHTBOX OVERLAY STYLES */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.88);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            cursor: zoom-out;
+        }
+
+        .lightbox-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 6px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-overlay.active .lightbox-img {
+            transform: scale(1);
+        }
+
         @media (max-width: 600px) { 
             header { padding: 30px 15px 50px; } 
             header h1 { font-size: 1.8em; } 
@@ -121,9 +164,12 @@
             <i class="fas fa-stethoscope header-icon left"></i>
             <i class="fas fa-heart-pulse header-icon right"></i>
         </div>
-        <img src="dr-john-stafford-geddes-portrait.jpg"
+        <!-- Configured with target id and informative mouseover title -->
+        <img id="triggerPortrait" 
+             src="dr-john-stafford-geddes-portrait.jpg"
              alt="Charcoal sketch portrait of Dr. John Stafford Geddes, cardiac pioneer"
-             class="header-img">
+             class="header-img"
+             title="Click to see portrait photo">
         <h1>Dr. John Stafford Geddes</h1>
         <p>Newspaper Archives & Historical Records</p>
     </header>
@@ -140,5 +186,28 @@
     </div>
 
     <footer><p>&copy; 2026 The Dr. John Stafford Geddes Archive. All Rights Reserved.</p></footer>
+
+    <!-- OVERLAY LAYOUT COUPLING TO BRAINDRAIN6.JPG -->
+    <div id="portraitLightbox" class="lightbox-overlay">
+        <img class="lightbox-img" src="braindrain6.jpg" alt="Dr. John S. Geddes photograph (2017)">
+    </div>
+
+    <!-- CONTROLLER DISPATCHER -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var trigger = document.getElementById('triggerPortrait');
+            var lightbox = document.getElementById('portraitLightbox');
+
+            // Opens full screen view swapping to the 2017 photograph
+            trigger.addEventListener('click', function() {
+                lightbox.classList.add('active');
+            });
+
+            // Dismisses overlay
+            lightbox.addEventListener('click', function() {
+                lightbox.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
