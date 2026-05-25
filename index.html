@@ -33,9 +33,11 @@
     <meta property="og:url" content="https://drjohnsgeddes.github.io/archive/">
     <meta property="og:description" content="Medical history documenting the life and work of cardiology pioneer Dr. John Stafford Geddes, the Belfast Flying Squad, and the introduction of defibrillators to commercial airlines.">
     
+    <!-- GOOGLE SEARCH CONFIGURATION: Points directly to the scrubs photo -->
     <meta property="og:image" content="https://drjohnsgeddes.github.io/archive/dr-john-stafford-geddes.jpg">
     <meta name="thumbnail" content="dr-john-stafford-geddes.jpg">
 
+    <!-- STRUCTURED DATA: Tells Google's indexing bot what thumbnail asset to lock onto -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -175,7 +177,7 @@
 
     <div class="container">
         <div class="portrait-frame">
-            <!-- Added id and title attribute for better desktop user UX -->
+            <!-- VISIBLE INTERFACE: Stays locked onto the charcoal portrait layout -->
             <img id="portraitImg" src="dr-john-stafford-geddes-portrait.jpg" alt="Charcoal sketch portrait of Dr. John Stafford Geddes" title="Click to view full screen">
         </div>
 
@@ -185,7 +187,7 @@
 
         <div class="links-grid">
             <div class="card"><a href="https://grokipedia.com/page/John_Stafford_Geddes" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-medical"></i><div class="card-content"><h3>Grokipedia Profile</h3><p>Comprehensive entry on his life, innovations, and contributions to cardiac emergency care.</p></div></a></div>
-            <div class="card"><a href="https://history.rcp.ac.uk/inspiring-physicians/john-stafford-geddes" target="_blank" rel="noopener noreferrer"><i class="fas fa-user-md"></i><div class="card-content"><h3>RCP Inspiring Physicians Biography</h3><p>Royal College of Physicians historical profile highlighting his pioneering role.</p></div></a></div>
+            <div class="card"><a href="https://history.rcp.ac.uk/inspiring-physicians/john-staff-geddes" target="_blank" rel="noopener noreferrer"><i class="fas fa-user-md"></i><div class="card-content"><h3>RCP Inspiring Physicians Biography</h3><p>Royal College of Physicians historical profile highlighting his pioneering role.</p></div></a></div>
             <div class="card"><a href="https://en.wikipedia.org/wiki/John_Stafford_Geddes" target="_blank" rel="noopener noreferrer"><i class="fab fa-wikipedia-w"></i><div class="card-content"><h3>Wikipedia Page</h3><p>Detailed encyclopedia entry on his key achievements in mobile CCU and defibrillation.</p></div></a></div>
             <div class="card"><a href="https://www.belfasttelegraph.co.uk/news/health/hardly-a-day-goes-past-when-i-dont-think-about-the-donor-ni-man-marks-38-years-since-heart-transplant/a/112137185.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-newspaper"></i><div class="card-content"><h3>Belfast Telegraph Article</h3><p>Heart transplant survivor's story mentioning Dr. Geddes as his longtime cardiologist.</p></div></a></div>
             <div class="card"><a href="https://www.bmj.com/content/388/bmj.r154" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-medical"></i><div class="card-content"><h3>BMJ Obituary</h3><p>British Medical Journal professional tribute to his groundbreaking work.</p></div></a></div>
@@ -216,23 +218,20 @@
     
     <footer><p>❤️ In loving memory of Popsie. Beloved husband of Florence, devoted father of Stephen and Johnny. A life dedicated to saving others. ❤️</p></footer>
 
-    <!-- LIGHTBOX OVERLAY ELEMENT -->
+    <!-- LIGHTBOX OVERLAY ELEMENT: Keeps full screen matching the local visible picture -->
     <div id="lightbox" class="lightbox-overlay">
         <img class="lightbox-img" src="dr-john-stafford-geddes-portrait.jpg" alt="Dr. John Stafford Geddes Full Screen Portrait">
     </div>
 
-    <!-- LIGHTBOX JAVASCRIPT CONTROLLER -->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             var portrait = document.getElementById('portraitImg');
             var lightbox = document.getElementById('lightbox');
 
-            // Open full screen overlay when the main image is clicked
             portrait.addEventListener('click', function() {
                 lightbox.classList.add('active');
             });
 
-            // Close full screen overlay when clicking anywhere outside or on the full screen image
             lightbox.addEventListener('click', function() {
                 lightbox.classList.remove('active');
             });
