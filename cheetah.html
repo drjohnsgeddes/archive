@@ -11,17 +11,101 @@
     <style>
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f9; text-align: center; padding: 20px; }
         .article-container { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 900px; margin: auto; }
-        img { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px; }
+        
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hover and pointer styles for clickability cue */
+        .clickable-img {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .clickable-img:hover {
+            transform: scale(1.015);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
         .back-btn { display: inline-block; padding: 10px 20px; background: #004080; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+    
+        /* LIGHTBOX OVERLAY STYLES */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.88);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            cursor: zoom-out;
+        }
+
+        .lightbox-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-img {
+            max-width: 92%;
+            max-height: 92%;
+            border-radius: 4px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+            transform: scale(0.96);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-overlay.active .lightbox-img {
+            transform: scale(1);
+        }
     </style>
 </head>
 <body>
     <div class="article-container">
         <h1>Scientific American</h1>
-        <img src="cheetah1.jpg" alt="Scientific American article featuring Dr. John Stafford Geddes, cardiac pioneer">
-        <img src="cheetah2.jpg" alt="Scientific American article featuring Dr. John Stafford Geddes, cardiac pioneer - page 2">
+        
+        <!-- Attached 'clickable-img' class and view titles -->
+        <img class="clickable-img" src="cheetah1.jpg" alt="Scientific American article featuring Dr. John Stafford Geddes, cardiac pioneer" title="Click to view full screen">
+        <img class="clickable-img" src="cheetah2.jpg" alt="Scientific American article featuring Dr. John Stafford Geddes, cardiac pioneer - page 2" title="Click to view full screen">
         <br>
         <a href="DRJSGArticles.html" class="back-btn">← Back to Archives</a>
     </div>
+
+    <!-- REUSABLE LIGHTBOX OVERLAY -->
+    <div id="lightbox" class="lightbox-overlay">
+        <img id="lightboxTarget" class="lightbox-img" src="" alt="Expanded View">
+    </div>
+
+    <!-- LIGHTBOX CONTROLLER SCRIPT -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxTarget = document.getElementById('lightboxTarget');
+            var clickableImages = document.querySelectorAll('.clickable-img');
+
+            clickableImages.forEach(function(image) {
+                image.addEventListener('click', function() {
+                    lightboxTarget.src = this.src;
+                    lightboxTarget.alt = this.alt;
+                    lightbox.classList.add('active');
+                });
+            });
+
+            lightbox.addEventListener('click', function() {
+                lightbox.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
