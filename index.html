@@ -32,64 +32,64 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://drjohnsgeddes.github.io/archive/">
     <meta property="og:description" content="Medical history documenting the life and work of cardiology pioneer Dr. John Stafford Geddes, the Belfast Flying Squad, and the introduction of defibrillators to commercial airlines.">
-    
     <meta property="og:image" content="https://drjohnsgeddes.github.io/archive/dr-john-stafford-geddes.jpg">
     <meta name="thumbnail" content="dr-john-stafford-geddes.jpg">
 
     <script type="application/ld+json">
-[
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Dr. John Stafford Geddes Archive",
-      "alternateName": "Dr. John S. Geddes Tribute",
-      "url": "https://drjohnsgeddes.github.io/archive/",
-      "description": "Digital archive for Dr. John Stafford Geddes, visionary cardiologist and founder of the Belfast 'Flying Squad'—the world's first mobile coronary care unit.",
-      "image": "https://drjohnsgeddes.github.io/archive/dr-john-stafford-geddes.jpg"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "John Stafford Geddes",
-      "alternateName": "Dr. John Stafford Geddes",
-      "honorificPrefix": "Dr.",
-      "birthDate": "1939-06-10",
-      "deathDate": "2024-10-09",
-      "birthPlace": {
-        "@type": "Place",
-        "name": "Belfast, Northern Ireland"
-      },
-      "nationality": "British",
-      "jobTitle": "Cardiologist",
-      "description": "Northern Irish cardiologist who co-developed the world's first mobile coronary care unit in Belfast in 1966, pioneered portable defibrillation, and championed defibrillator implementation on commercial airlines including Qantas.",
-      "url": "https://drjohnsgeddes.github.io/archive/",
-      "image": "https://drjohnsgeddes.github.io/archive/dr-john-stafford-geddes-portrait.jpg",
-      "sameAs": [
-        "https://en.wikipedia.org/wiki/John_Stafford_Geddes",
-        "https://history.rcp.ac.uk/inspiring-physicians/john-stafford-geddes",
-        "https://www.bmj.com/content/388/bmj.r154",
-        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12042856/"
-      ],
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Queen's University Belfast"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Royal Victoria Hospital, Belfast"
-      },
-      "colleague": {
-        "@type": "Person",
-        "name": "Frank Pantridge",
-        "url": "https://en.wikipedia.org/wiki/Frank_Pantridge"
-      },
-      "spouse": {
-        "@type": "Person",
-        "name": "Florence Geddes"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Dr. John Stafford Geddes Archive",
+          "alternateName": "Dr. John S. Geddes Tribute",
+          "url": "https://drjohnsgeddes.github.io/archive/",
+          "description": "Digital archive for Dr. John Stafford Geddes, visionary cardiologist and founder of the Belfast 'Flying Squad'—the world's first mobile coronary care unit.",
+          "image": "https://drjohnsgeddes.github.io/archive/dr-john-stafford-geddes.jpg"
+        },
+        {
+          "@type": "Person",
+          "name": "John Stafford Geddes",
+          "alternateName": "Dr. John Stafford Geddes",
+          "honorificPrefix": "Dr.",
+          "birthDate": "1939-06-10",
+          "deathDate": "2024-10-09",
+          "birthPlace": {
+            "@type": "Place",
+            "name": "Belfast, Northern Ireland"
+          },
+          "nationality": "British",
+          "jobTitle": "Cardiologist",
+          "description": "Northern Irish cardiologist who co-developed the world's first mobile coronary care unit in Belfast in 1966, pioneered portable defibrillation, and championed defibrillator implementation on commercial airlines including Qantas.",
+          "url": "https://drjohnsgeddes.github.io/archive/",
+          "image": "https://drjohnsgeddes.github.io/archive/dr-john-stafford-geddes-portrait.jpg",
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/John_Stafford_Geddes",
+            "https://history.rcp.ac.uk/inspiring-physicians/john-stafford-geddes",
+            "https://www.bmj.com/content/388/bmj.r154",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC12042856/"
+          ],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Queen's University Belfast"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Royal Victoria Hospital, Belfast"
+          },
+          "colleague": {
+            "@type": "Person",
+            "name": "Frank Pantridge",
+            "url": "https://en.wikipedia.org/wiki/Frank_Pantridge"
+          },
+          "spouse": {
+            "@type": "Person",
+            "name": "Florence Geddes"
+          }
+        }
+      ]
     }
-]
-</script>
+    </script>
 
     <link rel="canonical" href="https://drjohnsgeddes.github.io/archive/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -129,7 +129,6 @@
             transform: scale(1.03);
         }
 
-        /* LIGHTBOX STYLES */
         .lightbox-overlay {
             position: fixed;
             top: 0;
@@ -254,12 +253,10 @@
     
     <footer><p>❤️ In loving memory of Popsie. Beloved husband of Florence, devoted father of Stephen and Johnny. A life dedicated to saving others. ❤️</p></footer>
 
-    <!-- LIGHTBOX OVERLAY ELEMENT -->
     <div id="lightbox" class="lightbox-overlay">
         <img class="lightbox-img" src="dr-john-stafford-geddes-portrait.jpg" alt="Dr. John Stafford Geddes Full Screen Portrait">
     </div>
 
-    <!-- SMART HISTORY-BASED LIGHTBOX CONTROLLER -->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             var portrait = document.getElementById('portraitImg');
