@@ -75,7 +75,6 @@
     <div class="article-container">
         <h1>Ulster TV Times</h1>
         
-        <!-- Attached 'clickable-img' class and helpful desktop view titles -->
         <img class="clickable-img" src="tvtimes1.jpg" alt="Ulster TV Times article featuring Dr. John Stafford Geddes, cardiac pioneer" title="Click to view full screen">
         <img class="clickable-img" src="tvtimes2.jpg" alt="Ulster TV Times article featuring Dr. John Stafford Geddes, cardiac pioneer - page 2" title="Click to view full screen">
         <br>
@@ -87,23 +86,45 @@
         <img id="lightboxTarget" class="lightbox-img" src="" alt="Expanded View">
     </div>
 
-    <!-- LIGHTBOX CONTROLLER SCRIPT -->
+    <!-- SMART MULTI-IMAGE HISTORY CONTROLLER -->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             var lightbox = document.getElementById('lightbox');
             var lightboxTarget = document.getElementById('lightboxTarget');
             var clickableImages = document.querySelectorAll('.clickable-img');
 
+            // Safe exit tracking function
+            function closeLightbox() {
+                if (lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    // Reset hash history line if present
+                    if (window.location.hash === '#view-document') {
+                        history.back();
+                    }
+                }
+            }
+
+            // Loop and attach state controllers to all image tags on the page
             clickableImages.forEach(function(image) {
                 image.addEventListener('click', function() {
                     lightboxTarget.src = this.src;
                     lightboxTarget.alt = this.alt;
                     lightbox.classList.add('active');
+                    // Push fake state tracking token to browser history stack
+                    history.pushState({lightbox: true}, null, '#view-document');
                 });
             });
 
+            // Handle direct overlay click closeout
             lightbox.addEventListener('click', function() {
-                lightbox.classList.remove('active');
+                closeLightbox();
+            });
+
+            // INTERCEPT THE BACK BUTTON: Dismiss overlay seamlessly
+            window.addEventListener('popstate', function(event) {
+                if (lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                }
             });
         });
     </script>
