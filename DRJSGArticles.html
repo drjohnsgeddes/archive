@@ -164,7 +164,6 @@
             <i class="fas fa-stethoscope header-icon left"></i>
             <i class="fas fa-heart-pulse header-icon right"></i>
         </div>
-        <!-- Configured with target id and informative mouseover title -->
         <img id="triggerPortrait" 
              src="dr-john-stafford-geddes-portrait.jpg"
              alt="Charcoal sketch portrait of Dr. John Stafford Geddes, cardiac pioneer"
@@ -192,20 +191,38 @@
         <img class="lightbox-img" src="braindrain6.jpg" alt="Dr. John S. Geddes photograph (2017)">
     </div>
 
-    <!-- CONTROLLER DISPATCHER -->
+    <!-- SMART HISTORY-BASED BACK BUTTON CONTROLLER -->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             var trigger = document.getElementById('triggerPortrait');
             var lightbox = document.getElementById('portraitLightbox');
 
-            // Opens full screen view swapping to the 2017 photograph
+            // Safe close function that manages state cleanly
+            function closeLightbox() {
+                if (lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    if (window.location.hash === '#view-portrait') {
+                        history.back();
+                    }
+                }
+            }
+
+            // Opens full screen view and creates historical anchor state
             trigger.addEventListener('click', function() {
                 lightbox.classList.add('active');
+                history.pushState({lightbox: true}, null, '#view-portrait');
             });
 
-            // Dismisses overlay
+            // Closes full screen if user clicks directly on the open modal layout
             lightbox.addEventListener('click', function() {
-                lightbox.classList.remove('active');
+                closeLightbox();
+            });
+
+            // INTERCEPT THE BACK BUTTON: Dismisses layout if browser history navigates backward
+            window.addEventListener('popstate', function(event) {
+                if (lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                }
             });
         });
     </script>
