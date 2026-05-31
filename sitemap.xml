@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/</loc>
-    <priority>1.00</priority>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/DRJSGArticles.html</loc>
-    <priority>0.50</priority>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/braindrain.html</loc>
-    <priority>0.40</priority>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/century.html</loc>
-    <priority>0.40</priority>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/cheetah.html</loc>
-    <priority>0.40</priority>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/newsbulletin.html</loc>
-    <priority>0.40</priority>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://drjohnsgeddes.github.io/archive/tvtimes.html</loc>
-    <priority>0.40</priority>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
+
 </urlset>
