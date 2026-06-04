@@ -8,6 +8,10 @@
     
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Font Awesome Icons for Uniform Button Support -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f9; text-align: center; padding: 20px; }
         .article-container { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 900px; margin: auto; }
@@ -31,7 +35,20 @@
             box-shadow: 0 6px 15px rgba(0,0,0,0.15);
         }
 
-        .back-btn { display: inline-block; padding: 10px 20px; background: #004080; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        .back-btn { 
+            display: inline-flex; 
+            align-items: center; 
+            padding: 10px 20px; 
+            background: #004080; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin-top: 20px; 
+            font-weight: bold;
+        }
+        .back-btn i {
+            margin-right: 10px;
+        }
     
         /* LIGHTBOX OVERLAY STYLES */
         .lightbox-overlay {
@@ -98,7 +115,9 @@
             </p>
         </div>
         <br>
-        <a href="DRJSGArticles.html" class="back-btn">← Back to Articles Page</a>
+        
+        <!-- Updated to use the sleek standard arrow icon -->
+        <a href="DRJSGArticles.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Articles Page</a>
     </div> 
 
     <!-- REUSABLE LIGHTBOX STRUCTURE -->
