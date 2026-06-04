@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military History Article | Dr. John Stafford Geddes Archive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .article-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+            cursor: zoom-in;
+            transition: transform 0.2s ease;
+        }
+        /* Full Screen Zoom Styles */
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 0;
+            box-sizing: border-box;
+            cursor: zoom-out;
+        }
+        .fullscreen img {
+            width: auto;
+            max-width: 95%;
+            height: auto;
+            margin: auto;
+            display: block;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-link:hover {
+            background-color: #003d82;
+        }
+        .close-btn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            color: #333;
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+
+<button class="close-btn" id="closeBtn" onclick="closeFullscreen()">Close Full Screen</button>
+
+<div class="container" id="mainContainer">
+    <img src="MilitaryHistory1.jpg" alt="Military History Page 1" class="article-img">
+    <img src="MilitaryHistory2.jpg" alt="Military History Page 2" class="article-img">
+    
+    <a href="index.html" class="back-link">Back to Archive</a>
+</div>
+
+<script>
+    const images = document.querySelectorAll('.article-img');
+    const closeBtn = document.getElementById('closeBtn');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            if (!img.parentElement.classList.contains('fullscreen')) {
+                // Create a temporary container to hold the image in full screen
+                const overlay = document.createElement('div');
+                overlay.classList.add('fullscreen');
+                overlay.id = 'activeOverlay';
+                
+                // Clone the image into the overlay
+                const clone = img.cloneNode();
+                overlay.appendChild(clone);
+                document.body.appendChild(overlay);
+                
+                // Show close button
+                closeBtn.style.display = 'block';
+                
+                // Clicking the background or the image exits full screen
+                overlay.addEventListener('click', closeFullscreen);
+                
+                // Push state to browser history so the hardware back button works
+                history.pushState({fullscreen: true}, "");
+            }
+        });
+    });
+
+    function closeFullscreen() {
+        const overlay = document.getElementById('activeOverlay');
+        if (overlay) {
+            overlay.remove();
+            closeBtn.style.display = 'none';
+            // Sync browser history if user clicked to close instead of hitting back
+            if (history.state && history.state.fullscreen) {
+                history.back();
+            }
+        }
+    }
+
+    // Handle browser back button to exit full screen safely
+    window.addEventListener('popstate', (event) => {
+        const overlay = document.getElementById('activeOverlay');
+        if (overlay) {
+            overlay.remove();
+            closeBtn.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
