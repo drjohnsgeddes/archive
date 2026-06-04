@@ -10,9 +10,12 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicon.png">
 
+    <!-- Font Awesome Icons for Uniform Button Support -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
@@ -24,6 +27,7 @@
             background: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
         .article-img {
             width: 100%;
@@ -58,18 +62,22 @@
             display: block;
         }
         .back-link {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background-color: #0056b3;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: bold;
+            transition: background-color 0.2s ease;
         }
         .back-link:hover {
             background-color: #003d82;
+        }
+        .back-link i {
+            margin-right: 10px;
         }
         .close-btn {
             display: none;
@@ -100,8 +108,8 @@
     <img src="ReaderDigest6.jpg" alt="Reader's Digest Page 6" class="article-img">
     <img src="ReaderDigest7.jpg" alt="Reader's Digest Page 7" class="article-img">
     
-    <!-- Corrected destination link to Articles page -->
-    <a href="DRJSGArticles.html" class="back-btn">← Back to Articles Page</a>
+    <!-- Uniform navigation button -->
+    <a href="DRJSGArticles.html" class="back-link"><i class="fas fa-chevron-left"></i> Back to Articles Page</a>
 </div>
 
 <script>
