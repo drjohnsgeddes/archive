@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reader's Digest Article | Dr. John Stafford Geddes Archive</title>
+    
+    <!-- Favicon Links for Browser Address Bar Support -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,6 +65,8 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
         }
         .back-link:hover {
             background-color: #003d82;
@@ -92,7 +100,8 @@
     <img src="ReaderDigest6.jpg" alt="Reader's Digest Page 6" class="article-img">
     <img src="ReaderDigest7.jpg" alt="Reader's Digest Page 7" class="article-img">
     
-    <a href="index.html" class="back-link">Back to Archive</a>
+    <!-- Corrected destination link to Articles page -->
+    <a href="DRJSGArticles.html" class="back-link">Back to Articles</a>
 </div>
 
 <script>
@@ -111,7 +120,6 @@
                 document.body.appendChild(overlay);
                 
                 closeBtn.style.display = 'block';
-                
                 overlay.addEventListener('click', closeFullscreen);
                 
                 history.pushState({fullscreen: true}, "");
