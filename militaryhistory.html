@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Military History Article | Dr. John Stafford Geddes Archive</title>
+    
+    <!-- Favicon Links for Browser Address Bar Support -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,6 +65,8 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
         }
         .back-link:hover {
             background-color: #003d82;
@@ -87,7 +95,8 @@
     <img src="MilitaryHistory1.jpg" alt="Military History Page 1" class="article-img">
     <img src="MilitaryHistory2.jpg" alt="Military History Page 2" class="article-img">
     
-    <a href="index.html" class="back-link">Back to Archive</a>
+    <!-- Corrected destination link to Articles page -->
+    <a href="DRJSGArticles.html" class="back-link">Back to Articles</a>
 </div>
 
 <script>
@@ -97,23 +106,17 @@
     images.forEach(img => {
         img.addEventListener('click', () => {
             if (!img.parentElement.classList.contains('fullscreen')) {
-                // Create a temporary container to hold the image in full screen
                 const overlay = document.createElement('div');
                 overlay.classList.add('fullscreen');
                 overlay.id = 'activeOverlay';
                 
-                // Clone the image into the overlay
                 const clone = img.cloneNode();
                 overlay.appendChild(clone);
                 document.body.appendChild(overlay);
                 
-                // Show close button
                 closeBtn.style.display = 'block';
-                
-                // Clicking the background or the image exits full screen
                 overlay.addEventListener('click', closeFullscreen);
                 
-                // Push state to browser history so the hardware back button works
                 history.pushState({fullscreen: true}, "");
             }
         });
@@ -124,14 +127,12 @@
         if (overlay) {
             overlay.remove();
             closeBtn.style.display = 'none';
-            // Sync browser history if user clicked to close instead of hitting back
             if (history.state && history.state.fullscreen) {
                 history.back();
             }
         }
     }
 
-    // Handle browser back button to exit full screen safely
     window.addEventListener('popstate', (event) => {
         const overlay = document.getElementById('activeOverlay');
         if (overlay) {
