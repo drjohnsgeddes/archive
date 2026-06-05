@@ -251,6 +251,7 @@
             font-size: 1.25rem;
             font-weight: normal;
             letter-spacing: 0.3px;
+            line-height: 1.4;
         }
 
         .ee-close-button {
@@ -321,7 +322,7 @@
             <div class="card"><a href="https://www.youtube.com/watch?v=3FknaUo3fig" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i><div class="card-content"><h3>History of Mobile Cardiac Ambulance (Video)</h3><p>Dr. Geddes narrating the 1966 launch of Belfast's pioneering mobile coronary care unit.</p></div></a></div>
             <div class="card"><a href="https://www.belfasttelegraph.co.uk/news/obituaries/tributes-paid-to-groundbreaking-ni-cardiologist-who-transformed-treatment-of-heart-conditions/a/112161756.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-newspaper"></i><div class="card-content"><h3>Belfast Telegraph: Tributes (2024)</h3><p>Heartfelt obituaries highlighting his transformative contributions to cardiac care.</p></div></a></div>
             <div class="card"><a href="https://www.resuscitationacademy.org/blog/2017/11/09/congratulations-ems-50th-birthday" target="_blank" rel="noopener noreferrer"><i class="fas fa-birthday-cake"></i><div class="card-content"><h3>EMS 50th Anniversary</h3><p>Resuscitation Academy celebration of 50 years of EMS, rooted in the Belfast 'Flying Squad' innovations.</p></div></a></div>
-            <div class="card"><a href="https://www.cardiovasculardiseHub.com/archives/10028" target="_blank" rel="noopener noreferrer"><i class="fas fa-laptop-medical"></i><div class="card-content"><h3>Cardiovascular Disease Hub</h3><p>Archived clinical perspective on mobile units. <br><strong style="color: #cc0000; font-size: 0.85em;">*Note: Please be aware that the portrait displayed on the linked external site is incorrect.</strong></p></div></a></div>
+            <div class="card"><a href="https://www.cardiovasculardisehub.com/archives/10028" target="_blank" rel="noopener noreferrer"><i class="fas fa-laptop-medical"></i><div class="card-content"><h3>Cardiovascular Disease Hub</h3><p>Archived clinical perspective on mobile units. <br><strong style="color: #cc0000; font-size: 0.85em;">*Note: Please be aware that the portrait displayed on the linked external site is incorrect.</strong></p></div></a></div>
         </div>
 
         <h2 style="text-align: center; color: #004080; margin: 40px 0 30px; font-size: 2.2em; position: relative;">For further reading:<span style="display: block; width: 80px; height: 3px; background: #0066cc; margin: 10px auto 0; border-radius: 2px;"></span></h2>
@@ -340,8 +341,8 @@
         <p>
             <!-- Left trigger heart: Popsie at the pier -->
             <a class="easter-egg-link" id="ee-trigger-pier" title="A special memory...">❤️</a> 
-            In loving memory of Popsie. Beloved husband of Florence, devoted father of Stephen and Johnny. A life dedicated to saving others. 
-            <!-- Right trigger heart: dating graphic -->
+            In loving memory of Popsie. Beloved husband of Florence, devoted father of Stephen and Johnny. A life dedicated to saving others.
+            <!-- Right trigger heart: dating snapshot -->
             <a class="easter-egg-link" id="ee-trigger-dating" title="A classic reminder...">❤️</a>
         </p>
     </footer>
@@ -402,7 +403,7 @@
             const eeModalCaption = document.getElementById('ee-modal-caption-element');
             const eeCloseBtn = document.querySelector('.ee-close-button');
 
-            // Open logic for Left Heart (PopsiePier.jpg with 2023 update)
+            // Open logic for Left Heart (PopsiePier.jpg)
             triggerPier.addEventListener('click', function(e) {
                 e.preventDefault();
                 eeModalImg.src = "PopsiePier.jpg";
@@ -417,8 +418,8 @@
             triggerDating.addEventListener('click', function(e) {
                 e.preventDefault();
                 eeModalImg.src = "mandpdating.jpg";
-                eeModalImg.alt = "M and P Dating Graphic";
-                eeModalCaption.textContent = ""; // Kept completely clean without captions as it speaks for itself
+                eeModalImg.alt = "Dr. Geddes and Nurse Florence (soon to be Mrs. Geddes), 1968";
+                eeModalCaption.textContent = "Dr. Geddes and Nurse Florence (soon to be Mrs. Geddes), 1968";
                 
                 eeModal.classList.add('open');
                 history.pushState({eeModal: true}, null, '#dating-memory');
@@ -427,7 +428,7 @@
             function closeEeModal() {
                 if (eeModal.classList.contains('open')) {
                     eeModal.classList.remove('open');
-                    // Reset sources clean when hidden
+                    // Reset sources cleanly when hidden
                     eeModalImg.src = "";
                     if (window.location.hash === '#secret-memory' || window.location.hash === '#dating-memory') {
                         history.back();
