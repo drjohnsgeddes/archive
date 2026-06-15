@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. John Stafford Geddes | Belfast Telegraph Brain Drain</title>
     <meta name="description" content="Belfast Telegraph Brain Drain article featuring Dr. John Stafford Geddes, pioneering Northern Irish cardiologist and co-inventor of the world's first mobile coronary care unit.">
-    
+   
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    
+   
     <!-- Font Awesome Icons for Uniform Button Support -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f9; text-align: center; padding: 20px; }
         .article-container { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 900px; margin: auto; }
-        
-        img { 
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 8px; 
-            margin-bottom: 20px; 
-            display: block; 
-            margin-left: auto; 
-            margin-right: auto; 
+       
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .clickable-img {
@@ -35,21 +35,21 @@
             box-shadow: 0 6px 15px rgba(0,0,0,0.15);
         }
 
-        .back-btn { 
-            display: inline-flex; 
-            align-items: center; 
-            padding: 10px 20px; 
-            background: #004080; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            margin-top: 20px; 
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
             font-weight: bold;
         }
         .back-btn i {
             margin-right: 10px;
         }
-    
+   
         /* LIGHTBOX OVERLAY STYLES */
         .lightbox-overlay {
             position: fixed;
@@ -71,6 +71,7 @@
         .lightbox-overlay.active {
             opacity: 1;
             visibility: visible;
+            transition: opacity 0.3s ease;
         }
 
         .lightbox-img {
@@ -90,23 +91,17 @@
 <body>
     <div class="article-container">
         <h1>Belfast Telegraph: Brain Drain</h1>
-        
+       
         <img class="clickable-img" src="braindrain1.jpg" alt="Belfast Telegraph Brain Drain article featuring Dr. John Stafford Geddes, cardiac pioneer" title="Click to view full screen">
         <img class="clickable-img" src="braindrain2.jpg" alt="Belfast Telegraph Brain Drain article featuring Dr. John Stafford Geddes, cardiac pioneer - page 2" title="Click to view full screen">
         <img class="clickable-img" src="braindrain3.jpg" alt="Belfast Telegraph Brain Drain article featuring Dr. John Stafford Geddes, cardiac pioneer - page 3" title="Click to view full screen">
-        
+       
         <div style="text-align: center;">
-            <img class="clickable-img" src="dr-john-stafford-geddes-mobile-unit.jpg" alt="Dr John Geddes (left) pictured at Royal Victoria Hospital Belfast" title="Click to view full screen">
-            <p style="font-weight: bold; margin-top: 10px; color: #333;">
-                Dr John Geddes (left) pictured at Royal Victoria Hospital Belfast
-            </p>
-
-            <br><br>
             <img class="clickable-img" src="dr-john-stafford-geddes.jpg" alt="Dr. John Stafford Geddes at Health Sciences Centre, Winnipeg, Canada, circa 1990s" title="Click to view full screen">
             <p style="font-weight: bold; margin-top: 10px; color: #333;">
                 Dr. John Stafford Geddes - Health Sciences Centre, Winnipeg, Canada - Circa 1990's
             </p>
-            
+           
             <br><br>
             <img class="clickable-img" src="braindrain5.jpg" alt="Dr. John Stafford Geddes with Dr. Sanguinetti, Mrs. Florence Geddes and Professor J.F. Pantridge at Latin American Congress of Prehospital Care, Montevideo, Uruguay, 1999" title="Click to view full screen">
             <p style="font-weight: bold; margin-top: 10px; color: #333;">
@@ -119,12 +114,19 @@
             <p style="font-weight: bold; margin-top: 10px; color: #333;">
                 Dr. John S. Geddes, BSc(Hons) QUB MD(1966) MRCP(1967) FACC(1977) FRCP(1978) - Picture taken 2017
             </p>
+            
+            <br><br>
+            <!-- Ambulance Picture and Updated Caption -->
+            <img class="clickable-img" src="braindrain7.jpg" alt="Mobile Coronary Care Unit - Royal Victoria Hospital, Belfast" title="Click to view full screen">
+            <p style="font-weight: bold; margin-top: 10px; color: #333;">
+                Dr John Geddes (left) pictured at Royal Victoria Hospital Belfast 
+            </p>
         </div>
         <br>
-        
+       
         <!-- Updated to use the sleek standard arrow icon -->
         <a href="DRJSGArticles.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Articles Page</a>
-    </div> 
+    </div>
 
     <!-- REUSABLE LIGHTBOX STRUCTURE -->
     <div id="lightbox" class="lightbox-overlay">
@@ -172,6 +174,6 @@
                 }
             });
         });
-    </script>
+   Script>
 </body>
 </html>
