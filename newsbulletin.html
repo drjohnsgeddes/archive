@@ -85,6 +85,15 @@
         .lightbox-overlay.active .lightbox-img {
             transform: scale(1);
         }
+
+        /* DIRECT STYLESHEET DARK MODE FOR WORLD CONGRESS BULLETIN PAGE */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #121212; }
+            .article-container { background: #1e1e1e; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+            h1 { color: #4fa3ff; }
+            .back-btn { background: linear-gradient(to right, #0b223a, #153e66); border: 1px solid #334155; color: #4fa3ff; }
+            .back-btn:hover { border-color: #4fa3ff; box-shadow: 0 6px 15px rgba(79,163,255,0.2); }
+        }
     </style>
 </head>
 <body>
