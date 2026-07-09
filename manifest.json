@@ -1,0 +1,8 @@
+{
+  "name": "Dr. John Stafford Geddes Archive",
+  "short_name": "Dr. Geddes Archive",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#0b223a"
+}
