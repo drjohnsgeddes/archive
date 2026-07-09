@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Mobile Browser Chrome & Status Bar Color Styling -->
-    <meta name="theme-color" content="#004080" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b223a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#004080" media="(prefers-color-scheme: light)">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
@@ -114,6 +114,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <style>
+        /* FORCE CORE SYSTEM BACKGROUND TO DARK VALUE SO OVERHEAD PHONE OS CHROME BLENDS NATIVELY */
+        html { background-color: #0b223a; }
+        @media (prefers-color-scheme: light) { html { background-color: #004080; } }
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to bottom, #e6f2ff, #ffffff); color: #333; margin: 0; padding: 0; line-height: 1.6; }
         
         header { background: linear-gradient(to right, #004080, #0066cc); color: white; text-align: center; padding: 60px 20px 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
@@ -240,7 +244,7 @@
             <div class="card"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12042856/" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i><div class="card-content"><h3>Ulster Medical Journal Reflection</h3><p>Thoughts on his passing and detailed collaborations with Pantridge.</p></div></a></div>
             <div class="card"><a href="https://en.everybodywiki.com/Dr._John_Stafford_Geddes" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i><div class="card-content"><h3>EverybodyWiki Profile</h3><p>Biographical overview including education and lasting influence on emergency medicine.</p></div></a></div>
             <div class="card"><a href="https://dalemerg.medicine.dal.ca/divisions/division-of-emergency-medical-services-ems/news-events/the-ems-20-50-celebration-symposium/invited-speakers/" target="_blank" rel="noopener noreferrer"><i class="fas fa-chalkboard-teacher"></i><div class="card-content"><h3>Dalhousie EMS Symposium Bio</h3><p>Featured speaker profile from the EMS 20/50 Celebration symposium.</p></div></a></div>
-            <div class="card"><a href="https://www.researchgate.net/publication/356537291_MY_MEMOORS_OF_THE_ROYAL_VICTORIA_HOSPITAL_PACEMAKER_IMPLANTATIONS_IN_THE_WEST_WING_OVER_HALF_A_CENTURY_AGO" target="_blank" rel="noopener noreferrer"><i class="fas fa-scroll"></i><div class="card-content"><h3>My Memoirs (RVH)</h3><p>Dr. Geddes' personal memoirs on early pacemaker work at Royal Victoria Hospital.</p></div></a></div>
+            <div class="card"><a href="https://www.researchgate.net/publication/356537291_MY_MEMOIRS_OF_THE_ROYAL_VICTORIA_HOSPITAL_PACEMAKER_IMPLANTATIONS_IN_THE_WEST_WING_OVER_HALF_A_CENTURY_AGO" target="_blank" rel="noopener noreferrer"><i class="fas fa-scroll"></i><div class="card-content"><h3>My Memoirs (RVH)</h3><p>Dr. Geddes' personal memoirs on early pacemaker work at Royal Victoria Hospital.</p></div></a></div>
             <div class="card"><a href="https://www.ahajournals.org/doi/10.1161/01.cir.96.9.2849?doi=10.1161/01.CIR.96.9.2849" target="_blank" rel="noopener noreferrer"><i class="fas fa-plane-departure"></i><div class="card-content"><h3>Aviation Cardiac Program</h3><p>Pioneering global work with Qantas Airways to implement airline defibrillation programs.</p></div></a></div>
             
             <div class="card"><a href="lady-minto-foundation.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i><div class="card-content"><h3>Lady Minto Hospital Foundation</h3><p>Features Dr. Geddes advocating for community AED programs.</p><p style="font-weight: bold; margin-top: 5px; color: #333;">*Note: Dr. Geddes referenced on page 6.</p></div></a></div>
