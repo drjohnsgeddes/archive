@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,6 +54,18 @@
           "alternateName": "Dr. John Stafford Geddes",
           "honorificPrefix": "Dr.",
           "birthDate": "1891-06-10",
+          "deathDate": "2024-10-09",
+          "birthPlace": {
+            "@type": "Place",
+            "name": "Belfast, Northern Ireland"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "John Stafford Geddes",
+          "alternateName": "Dr. John Stafford Geddes",
+          "honorificPrefix": "Dr.",
+          "birthDate": "1939-06-10",
           "deathDate": "2024-10-09",
           "birthPlace": {
             "@type": "Place",
@@ -164,6 +177,28 @@
             .links-grid { grid-template-columns: 1fr; }
             .header-icon { position: static; transform: none; font-size: 2.2em; opacity: 0.8; margin: 5px; }
             .icon-wrapper { display: flex; justify-content: center; gap: 20px; }
+        }
+
+        /* DIRECT STYLESHEET DARK MODE - ADDED CAREFULLY HERE */
+        @media (prefers-color-scheme: dark) {
+            body { background: linear-gradient(to bottom, #111a24, #121212); color: #e0e0e0; }
+            header { background: linear-gradient(to right, #0b223a, #153e66); box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+            .intro { background: #1e1e1e; color: #e0e0e0; box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+            .card { background: #1e1e1e; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+            .card:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
+            .card a { color: #6ba4e8; }
+            .card i { color: #4fa3ff; }
+            .card-content p { color: #b0b0b0; }
+            .reading-card { background: #262115 !important; border: 2px solid #aa8c2c !important; }
+            .reading-card a { color: #ffd75e !important; }
+            .reading-card i { color: #d4af37 !important; }
+            .reading-card .card-content p { color: #dfcba3 !important; }
+            h2 { color: #4fa3ff !important; }
+            footer { background: #0b223a; }
+            footer a { color: #90caf9; }
+            .archive-button { background-color: #1e1e1e; color: #4fa3ff; border: 2px solid #334155; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+            .archive-button:hover { background-color: #2d2d2d; border-color: #4fa3ff; }
+            .card-content p[style*="color: #333"] { color: #e0e0e0 !important; }
         }
     </style>
 </head>
