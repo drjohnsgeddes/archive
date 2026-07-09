@@ -14,6 +14,17 @@
         p { font-size: 1.1em; color: #555; margin: 0 0 30px 0; line-height: 1.5; }
         .home-btn { display: inline-block; padding: 12px 25px; background: linear-gradient(to right, #004080, #0066cc); color: white; text-decoration: none; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; }
         .home-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.3); opacity: 0.95; }
+
+        /* DIRECT STYLESHEET DARK MODE FOR REDIRECT PAGE */
+        @media (prefers-color-scheme: dark) {
+            body { background: linear-gradient(to bottom, #111a24, #121212); color: #e0e0e0; }
+            .error-container { background: #1e1e1e; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+            i.error-icon { color: #4fa3ff; }
+            h1 { color: #4fa3ff; }
+            p { color: #b0b0b0; }
+            .home-btn { background: linear-gradient(to right, #0b223a, #153e66); box-shadow: 0 4px 10px rgba(0,0,0,0.4); border: 1px solid #334155; }
+            .home-btn:hover { border-color: #4fa3ff; box-shadow: 0 6px 15px rgba(79,163,255,0.2); }
+        }
     </style>
 </head>
 <body>
