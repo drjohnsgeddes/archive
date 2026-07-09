@@ -152,6 +152,20 @@
             .icon-wrapper { display: flex; justify-content: center; gap: 20px; order: -1; } 
             .content-container { margin: -20px 15px 40px; padding: 25px; } 
         }
+
+        /* DIRECT STYLESHEET DARK MODE FOR MEDIA LINKS PAGE */
+        @media (prefers-color-scheme: dark) {
+            body { background: linear-gradient(to bottom, #111a24, #121212); color: #e0e0e0; }
+            .nav-bar { background: linear-gradient(to right, #0b223a, #123456); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+            .nav-bar a { color: #90caf9; }
+            header { background: linear-gradient(to right, #0b223a, #153e66); box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+            .header-img { border: 5px solid #4fa3ff; box-shadow: 0 8px 25px rgba(0,0,0,0.6); }
+            .content-container { background: #1e1e1e; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+            h2 { color: #4fa3ff; }
+            .article-link { background: #1e1e1e; border: 2px solid #334155; color: #4fa3ff; }
+            .article-link:hover { background: #4fa3ff; color: #121212; box-shadow: 0 5px 15px rgba(79,163,255,0.4); border-color: #4fa3ff; }
+            footer { background: #0b223a; }
+        }
     </style>
 </head>
 <body>
