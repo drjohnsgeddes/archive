@@ -93,6 +93,15 @@
             cursor: pointer;
             z-index: 10000;
         }
+
+        /* DIRECT STYLESHEET DARK MODE FOR READER'S DIGEST PAGE */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #121212; }
+            .container { background: #1e1e1e; box-shadow: 0 0 10px rgba(0,0,0,0.4); }
+            .back-link { background-color: #153e66; color: #4fa3ff; border: 1px solid #334155; }
+            .back-link:hover { background-color: #1a4b7c; border-color: #4fa3ff; box-shadow: 0 6px 15px rgba(79,163,255,0.2); }
+            .close-btn { background: #2d2d2d; color: #e0e0e0; border: 1px solid #444; }
+        }
     </style>
 </head>
 <body>
