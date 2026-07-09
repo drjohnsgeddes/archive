@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Mobile Browser Chrome & Status Bar Color Styling -->
+    <meta name="theme-color" content="#004080" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b223a" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
     <title>Dr. John Stafford Geddes | Visionary Cardiologist & Founder of the Belfast "Flying Squad"</title>
 
     <script type="text/javascript">
@@ -178,7 +184,7 @@
             .icon-wrapper { display: flex; justify-content: center; gap: 20px; }
         }
 
-        /* DIRECT STYLESHEET DARK MODE - ADDED CAREFULLY HERE */
+        /* DIRECT STYLESHEET DARK MODE */
         @media (prefers-color-scheme: dark) {
             body { background: linear-gradient(to bottom, #111a24, #121212); color: #e0e0e0; }
             header { background: linear-gradient(to right, #0b223a, #153e66); box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
@@ -188,10 +194,13 @@
             .card a { color: #6ba4e8; }
             .card i { color: #4fa3ff; }
             .card-content p { color: #b0b0b0; }
-            .reading-card { background: #262115 !important; border: 2px solid #aa8c2c !important; }
-            .reading-card a { color: #ffd75e !important; }
+            
+            /* REFINED GOLD STYLES FOR FURTHER READING BUTTONS IN DARK MODE */
+            .reading-card { background: #1c1912 !important; border: 2px solid #8c732b !important; }
+            .reading-card a { color: #e5c158 !important; }
             .reading-card i { color: #d4af37 !important; }
-            .reading-card .card-content p { color: #dfcba3 !important; }
+            .reading-card .card-content p { color: #cfc2a9 !important; }
+            
             h2 { color: #4fa3ff !important; }
             footer { background: #0b223a; }
             footer a { color: #90caf9; }
@@ -352,4 +361,4 @@
         });
     </script>
 </body>
-</html> 
+</html>
