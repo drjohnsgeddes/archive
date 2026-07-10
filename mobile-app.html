@@ -14,6 +14,15 @@
 
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f9; text-align: center; padding: 20px; color: #333; margin: 0; }
+
+        /* TOP ACCENT BAR - matches main archive header gradient for continuity */
+        .top-accent-bar { position: fixed; top: 0; left: 0; width: 100%; background: linear-gradient(to right, #004080, #0066cc); box-shadow: 0 2px 6px rgba(0,0,0,0.15); z-index: 100; padding: 12px 15px; box-sizing: border-box; text-align: center; }
+        .top-accent-bar span { color: #ffffff; font-weight: bold; font-size: 1.05em; letter-spacing: 0.3px; }
+        body { padding-top: 50px; }
+
+        /* BOTTOM ACCENT BAR - mirrors the main archive's footer */
+        .bottom-accent-bar { background: linear-gradient(to right, #004080, #0066cc); color: white; text-align: center; padding: 18px 15px; font-size: 0.9em; margin-top: 40px; box-shadow: 0 -2px 6px rgba(0,0,0,0.15); }
+
         .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 750px; margin: 40px auto; text-align: left; }
         
         h1 { color: #004080; text-align: center; font-size: 2em; margin-bottom: 10px; }
@@ -37,6 +46,8 @@
    
         @media (prefers-color-scheme: dark) {
             body { background-color: #121212; color: #e0e0e0; }
+            .top-accent-bar { background: linear-gradient(to right, #0b223a, #153e66); }
+            .bottom-accent-bar { background: linear-gradient(to right, #0b223a, #153e66); }
             .container { background: #1e1e1e; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
             h1 { color: #4fa3ff; }
             .subtitle { color: #b0b0b0; }
@@ -50,6 +61,7 @@
     </style>
 </head>
 <body>
+    <div class="top-accent-bar"><span>Dr. John Stafford Geddes Archive</span></div>
     <div class="container">
         <h1>Get the Mobile App Version</h1>
         <p class="subtitle">Access the archive instantly right from your smartphone's home screen with seamless, beautiful borders.</p>
@@ -81,5 +93,7 @@
        
         <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Main Archive</a>
     </div>
+
+    <div class="bottom-accent-bar">© 2026 The Dr. John Stafford Geddes Archive. All Rights Reserved.</div>
 </body>
 </html>
