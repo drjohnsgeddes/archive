@@ -131,6 +131,38 @@
         html { background-color: #0b223a; }
         @media (prefers-color-scheme: light) { html { background-color: #004080; } }
 
+        /* SPLASH SCREEN */
+        #splash-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: #0b223a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease-out;
+        }
+        #splash-screen.splash-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #splash-screen img {
+            width: min(65vw, 320px);
+            height: auto;
+            opacity: 0;
+            transform: scale(0.85);
+            animation: splash-fade-in 0.9s ease-out forwards;
+            filter: drop-shadow(0 0 35px rgba(179, 27, 27, 0.6));
+        }
+        @keyframes splash-fade-in {
+            to { opacity: 1; transform: scale(1); }
+        }
+        body.splash-active {
+            overflow: hidden;
+            height: 100vh;
+        }
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to bottom, #e6f2ff, #ffffff); color: #333; margin: 0; padding: 0; line-height: 1.6; }
         
         header { background: linear-gradient(to right, #004080, #0066cc); color: white; text-align: center; padding: 60px 20px 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
@@ -228,7 +260,12 @@
         }
     </style>
 </head>
-<body>
+<body class="splash-active">
+
+    <!-- SPLASH SCREEN -->
+    <div id="splash-screen">
+        <img src="splash-icon.png" alt="Dr. John Stafford Geddes Archive">
+    </div>
     <header>
         <div class="icon-wrapper">
             <i class="fas fa-stethoscope header-icon left"></i>
@@ -317,6 +354,27 @@
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
+            // SPLASH SCREEN DISMISSAL
+            var splash = document.getElementById('splash-screen');
+            var minDisplayTime = 1200; // milliseconds the splash stays visible
+            var splashStart = Date.now();
+
+            function hideSplash() {
+                var elapsed = Date.now() - splashStart;
+                var remaining = Math.max(0, minDisplayTime - elapsed);
+                setTimeout(function() {
+                    splash.classList.add('splash-hidden');
+                    document.body.classList.remove('splash-active');
+                    setTimeout(function() { splash.remove(); }, 700);
+                }, remaining);
+            }
+
+            if (document.readyState === 'complete') {
+                hideSplash();
+            } else {
+                window.addEventListener('load', hideSplash);
+            }
+
             var portrait = document.getElementById('portraitImg');
             var lightbox = document.getElementById('lightbox');
 
