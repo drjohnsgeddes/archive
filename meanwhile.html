@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meanwhile in Ireland Inventions | Dr. John Stafford Geddes Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to bottom, #e6f2ff, #ffffff); margin: 0; padding: 0; color: #333; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        .nav-bar {
+            background: linear-gradient(to right, #004080, #0066cc);
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+        }
+        .nav-bar a {
+            text-decoration: none;
+            color: #e6f2ff;
+            font-weight: bold;
+            font-size: 1em;
+            transition: opacity 0.3s;
+        }
+        .nav-bar a:hover { opacity: 0.8; }
+
+        .content-container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            max-width: 800px; 
+            margin: 40px auto; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            flex-grow: 1; 
+            box-sizing: border-box;
+        }
+        
+        h1 { color: #004080; text-align: center; margin-top: 0; font-size: 1.8em; }
+        
+        .image-wrapper {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .pdf-link-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .btn-pdf {
+            display: inline-flex;
+            align-items: center;
+            background: #0066cc;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            box-shadow: 0 4px 10px rgba(0,102,204,0.2);
+        }
+
+        .btn-pdf:hover {
+            background: #004080;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,64,128,0.3);
+        }
+
+        .btn-pdf i {
+            margin-right: 10px;
+        }
+
+        footer { text-align: center; padding: 20px; background: #004080; color: white; font-size: 0.9em; width: 100%; margin-top: auto; }
+
+        @media (prefers-color-scheme: dark) {
+            body { background: linear-gradient(to bottom, #111a24, #121212); color: #e0e0e0; }
+            .nav-bar { background: linear-gradient(to right, #0b223a, #123456); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+            .nav-bar a { color: #90caf9; }
+            .content-container { background: #1e1e1e; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+            h1 { color: #4fa3ff; }
+            .image-wrapper img { border-color: #334155; }
+            .btn-pdf { background: #4fa3ff; color: #121212; }
+            .btn-pdf:hover { background: #82b1ff; }
+            footer { background: #0b223a; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="DRJSGArticles.html"><i class="fas fa-chevron-left"></i> Back to Articles Menu</a>
+    </nav>
+
+    <div class="content-container">
+        <h1>Meanwhile in Ireland: Inventions Retrospective</h1>
+        
+        <div class="image-wrapper">
+            <!-- Renders your locally hosted clean JPG selection -->
+            <img src="images/meanwhile-ireland.jpg" alt="Meanwhile in Ireland - Defibrillator Feature">
+        </div>
+
+        <!-- Working PDF Action trigger to download/view the full piece -->
+        <div class="pdf-link-container">
+            <a href="documents/meanwhile-ireland.pdf" target="_blank" class="btn-pdf">
+                <i class="fas fa-file-pdf"></i> Click Here to read Full Article
+            </a>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 The Dr. John Stafford Geddes Archive. All Rights Reserved.</p></footer>
+</body>
+</html>
