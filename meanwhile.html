@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +96,7 @@
 
         footer { text-align: center; padding: 20px; background: #004080; color: white; font-size: 0.9em; width: 100%; margin-top: auto; }
 
-        /* LIGHTBOX OVERLAY & DEEP MAGNIFICATION STYLES */
+        /* LIGHTBOX MULTI-STAGE COUPLING GRAPHICS */
         .lightbox-overlay {
             position: fixed;
             top: 0;
@@ -109,8 +110,8 @@
             z-index: 9999;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            overflow: auto; /* Allows panning when heavily zoomed */
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+            overflow: auto;
         }
 
         .lightbox-overlay.active {
@@ -119,25 +120,24 @@
         }
 
         .lightbox-img {
-            max-width: 95%;
-            max-height: 95%;
+            max-width: 90%;
+            max-height: 90%;
             object-fit: contain;
             border-radius: 6px;
             box-shadow: 0 10px 35px rgba(0,0,0,0.6);
-            transform: scale(0.95);
-            transition: transform 0.3s ease, max-width 0.3s ease, max-height 0.3s ease;
+            cursor: zoom-in;
+            transition: transform 0.2s ease-out, max-width 0.2s ease-out, max-height 0.2s ease-out;
+        }
+
+        /* Stage 2: Balanced 1.5x Medium Magnification Matrix */
+        .lightbox-img.mag-level-1 {
+            transform: scale(1.5);
             cursor: zoom-in;
         }
 
-        .lightbox-overlay.active .lightbox-img {
-            transform: scale(1);
-        }
-
-        /* High-power 2.5x Magnification State */
-        .lightbox-overlay.active .lightbox-img.deep-zoomed {
-            max-width: 250%;
-            max-height: 250%;
-            object-fit: none; /* Disables viewport scaling constraints */
+        /* Stage 3: Sharp 2.5x High-Powered Magnification Matrix */
+        .lightbox-img.mag-level-2 {
+            transform: scale(2.5);
             cursor: zoom-out;
         }
 
@@ -175,50 +175,65 @@
 
     <footer><p>&copy; 2026 The Dr. John Stafford Geddes Archive. All Rights Reserved.</p></footer>
 
-    <!-- Magnifier Lightbox Modal -->
+    <!-- Controlled Magnifier Lightbox Modal -->
     <div id="imageLightbox" class="lightbox-overlay">
-        <img id="lightboxTarget" class="lightbox-img" src="https://drjohnsgeddes.github.io/archive/meanwhile-ireland.jpg" alt="Magnified Article Feature" title="Click once to activate deep zoom. Click background to exit.">
+        <img id="lightboxTarget" class="lightbox-img" src="https://drjohnsgeddes.github.io/archive/meanwhile-ireland.jpg" alt="Magnified Article Feature" title="Click to zoom in further, click background to exit.">
     </div>
 
-    <!-- Multi-Stage Zoom Script Controller -->
+    <!-- Controlled Multi-Stage Loop Script Controller -->
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             var trigger = document.getElementById('zoomTrigger');
             var lightbox = document.getElementById('imageLightbox');
             var lightboxImg = document.getElementById('lightboxTarget');
+            
+            // Optical tracking state indicator
+            var currentZoomStage = 0; 
 
             function closeLightbox() {
                 if (lightbox.classList.contains('active')) {
                     lightbox.classList.remove('active');
-                    lightboxImg.classList.remove('deep-zoomed'); // Reset magnification state
+                    lightboxImg.classList.remove('mag-level-1', 'mag-level-2');
+                    currentZoomStage = 0; // Reset matrix state tracker
                     if (window.location.hash === '#zoom-article') {
                         history.back();
                     }
                 }
             }
 
-            // Stage 1: Open to standard full screen view
+            // Click 1: Initialize baseline layout
             trigger.addEventListener('click', function() {
                 lightbox.classList.add('active');
+                currentZoomStage = 1;
                 history.pushState({zoom: true}, null, '#zoom-article');
             });
 
-            // Stage 2: Toggle 2.5x deep magnification when clicking directly on the picture
+            // Click 2 & 3: Iterate magnification level loops inside safe screen array
             lightboxImg.addEventListener('click', function(e) {
-                e.stopPropagation(); // Prevents background click function from triggering
-                lightboxImg.classList.toggle('deep-zoomed');
+                e.stopPropagation(); // Shield backdrop triggers
+                
+                if (currentZoomStage === 1) {
+                    lightboxImg.classList.add('mag-level-1');
+                    currentZoomStage = 2;
+                } else if (currentZoomStage === 2) {
+                    lightboxImg.classList.remove('mag-level-1');
+                    lightboxImg.classList.add('mag-level-2');
+                    currentZoomStage = 3;
+                } else {
+                    closeLightbox();
+                }
             });
 
-            // Close modal completely when clicking on the dark background overlay
+            // Click 4 / Backdrop check: Reset array configuration
             lightbox.addEventListener('click', function() {
                 closeLightbox();
             });
 
-            // Keep browser navigation back button operational
             window.addEventListener('popstate', function(event) {
                 if (lightbox.classList.contains('active')) {
                     lightbox.classList.remove('active');
-                    lightboxImg.classList.remove('deep-zoomed');
+                    lightboxImg.classList.remove('mag-level-1', 'mag-level-2');
+                    currentZoomStage = 0;
                 }
             });
         });
